@@ -58,6 +58,7 @@ button{
 }
 
 button:hover{
+    transition-duration: 1s;
     background-color: black;
     color: rgba(0, 206, 231, 0.8);
     cursor: pointer;
