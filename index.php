@@ -17,7 +17,7 @@
         <li>FAQ</li>
         <li>Nous contactez</li>     
     </ul>
-    <button type="button">
+    <button onclick="location.href = 'login.php'"  type="button">
         Connexion
     </button>
     </div>
