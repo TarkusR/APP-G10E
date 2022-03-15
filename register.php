@@ -1,10 +1,11 @@
 <?php
 // Include les fichiers de config pour login a la BDD
+$link ="";
 require_once "config.php";
 
 // Definis les variables pour qu'elles soient vide
-$username = $password = $confirm_password = "";
-$username_err = $password_err = $confirm_password_err = "";
+$username = $password = $confirm_password = $email= $tel = $nom = $prenom = $dateNai= $sex ="";
+$username_err = $password_err = $confirm_password_err = $email_err = $tel_err = $nom_err = $prenom_err= $dateNai_err = $sex_err = "";
 
 // On check la method de request pour savoir si le form a été submit
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -13,10 +14,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["username"]))){
         $username_err = "Entrer un nom d'utilisateurs.";
     } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))){
-        $username_err = "Les noms d'utilisateurs ne peuvent contenir que de lettre des chiffre ou des tirets.";
+        $username_err = "Les noms d'utilisateurs ne peuvent contenir que des lettre des chiffre ou des tirets.";
     } else{
         // on prepare un select
-        $sql = "SELECT id FROM users WHERE username = ?";
+        $sql = "SELECT idUser FROM utilisateur WHERE username = ?";
+
 
 
         if($stmt = mysqli_prepare($link, $sql)){
@@ -45,6 +47,56 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
+    // Validation de l'email
+    if(empty(trim($_POST["email"]))){
+        $email_err = "Entrer une adresse e-mail valide.";
+    } elseif(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+        $email_err = "Entrer une adresse e-mail valide..";
+    } else{
+        $email = trim($_POST["email"]);
+    }
+
+    // Validation du num de tel
+    if(empty(trim($_POST["tel"]))){
+        $tel_err = "Entrer un numéro de telephone valide.";
+    } elseif(!preg_match("#[0][6-7][- \.?]?([0-9][0-9][- \.?]?){4}$#", $_POST["tel"])){
+        $tel_err = "Entrer un numéro de telephone valide.";
+    } else{
+        $tel = trim($_POST["tel"]);
+    }
+
+    // Validation du prenom
+    if(empty(trim($_POST["prenom"]))){
+        $prenom_err = "Entrer un prenom valide.";
+    } elseif(!ctype_alnum($_POST["prenom"])){
+        $prenom_err = "Entrer un prenom valide.";
+    } else{
+        $prenom = trim($_POST["prenom"]);
+    }
+
+    // Validation du nom
+    if(empty(trim($_POST["nom"]))){
+        $nom_err = "Entrer un nom valide.";
+    } elseif(!ctype_alnum($_POST["nom"])){
+        $nom_err = "Entrer un nom valide.";
+    } else{
+        $nom = trim($_POST["nom"]);
+    }
+
+    // Validation de la date de naissance
+    if(empty(trim($_POST["dateNai"]))){
+        $dateNai_err = "Entrer une date de naissance.";
+    }else{
+        $dateNai = trim($_POST["dateNai"]);
+    }
+
+    // Validation du sexe
+    if(empty($_POST["sex"])){
+        $sex_err = "Entrer une date de naissance.";
+    }else{
+        $sex = trim($_POST["sex"]);
+    }
+
     // Validation du mots de passe
     if(empty(trim($_POST["password"]))){
         $password_err = "entrer un mots de passe.";
@@ -64,19 +116,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
-    // On verifie si les input sont pas vide
-    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
+    // On verifie si les erreurs sont vide
+    if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err) && empty($tel_err) && empty($nom_err)){
 
         // on fait un insert
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        $sql = "INSERT INTO utilisateur (username, password, mail, phoneNumber, name, firstName, dateNaissance, sex) VALUES (?, ?, ?, ?, ?, ?, ?,?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Lie les variables au requetes sql
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            mysqli_stmt_bind_param($stmt, "ssssssss", $param_username, $param_password, $param_email, $param_tel, $param_nom, $param_prenom, $param_dateNai, $param_sex);
 
-            // recupere les parametre
+            // recupere les parametres
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_ARGON2ID); // Creates a password hash
+            $param_email = $email;
+            $param_tel = $tel;
+            $param_nom = $nom;
+            $param_prenom = $prenom;
+            $param_dateNai = $dateNai;
+            $param_sex = $sex;
 
             // On execute une premiere fois la requete
             if(mysqli_stmt_execute($stmt)){
@@ -89,10 +147,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Close statement
             mysqli_stmt_close($stmt);
         }
+
     }
 
     // Close Connexion
     mysqli_close($link);
+    echo $username_err.$email_err .$tel_err. $nom_err. $prenom_err. $confirm_password_err;
 }
 ?>
 
@@ -111,6 +171,38 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <label>Nom de compte</label>
             <input type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
             <span ><?php echo $username_err; ?></span>
+        </div>
+        <div >
+            <label>E-mail</label>
+            <input type="text" name="email" <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
+            <span ><?php echo $email_err; ?></span>
+        </div>
+        <div >
+            <label>Numéro de téléphone</label>
+            <input type="text" name="tel" <?php echo (!empty($tel_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $tel; ?>">
+            <span ><?php echo $tel_err; ?></span>
+        </div>
+        <div >
+            <label>Nom</label>
+            <input type="text" name="nom" <?php echo (!empty($nom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nom; ?>">
+            <span ><?php echo $nom_err; ?></span>
+        </div>
+        <div >
+            <label>Prenom</label>
+            <input type="text" name="prenom" <?php echo (!empty($prenom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prenom; ?>">
+            <span ><?php echo $prenom_err; ?></span>
+        </div>
+        <div >
+            <label>Date de naissance</label>
+            <input type="date" name="dateNai" <?php echo (!empty($dateNai_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $dateNai; ?>">
+            <span ><?php echo $dateNai_err; ?></span>
+        </div>
+        <div>
+            <input type="radio" name="sex" id="homme" value="homme" />
+            <label for="homme">Homme</label>
+
+            <input type="radio" name="sex" id="femme" value="femme" />
+            <label for="femme">Femme</label>
         </div>
         <div >
             <label>Mots de passe</label>

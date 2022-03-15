@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validation des données de login
     if(empty($username_err) && empty($password_err)){
         // on prepare un select
-        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        $sql = "SELECT idUser , username, password FROM utilisateur WHERE username = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Lie les parametres a la requetes
@@ -53,7 +53,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     // lie les resultats a la variable
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+
                     if(mysqli_stmt_fetch($stmt)){
+                        echo $password;
                         if(password_verify($password, $hashed_password)){
                             // Si le mots de passe est correct on lance une session
                             session_start();
@@ -62,6 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
+                            //$_SESSION["phone"]
 
                             // Redirige vers la page d'acceuil
                             header("location: index.php");
@@ -71,6 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         }
                     }
                 } else{
+
                     // si le nom d'utilisateur existe on display une erreur
                     $login_err = "Mots de passe ou nom d'utilisateur incorrect.";
                 }
@@ -119,7 +123,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div >
             <input type="submit"  value="Login">
         </div>
-        <p>Pas de compte ? <a href="register.php">Enregistrez vous maintenant !</a>.</p>
+        <p>Pas de compte ? <a href="register.php">Enregistrez vous maintenant </a>.</p>
     </form>
 </div>
 </body>
