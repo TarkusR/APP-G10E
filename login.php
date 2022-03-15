@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
 <div >
     <h2>Login</h2>
-    <p>Entrez donneés.</p>
+    <p>Entrez données.</p>
 
     <?php
     if(!empty($login_err)){

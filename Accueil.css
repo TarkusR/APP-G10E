@@ -47,7 +47,7 @@ li{
     color: rgba(0, 206, 231, 0.8);
 }
 
-button{
+.connexion{
     border: 0;
     text-align: center;
     font-size: 25px;
@@ -55,9 +55,10 @@ button{
     border-radius: 25px;
     background-color: rgba(0, 206, 231, 0.8);
     border: 3px solid white;
+    padding: 10px;
 }
 
-button:hover{
+.connexion:hover{
     transition-duration: 0.3s;
     background-color: black;
     color: rgba(0, 206, 231, 0.8);

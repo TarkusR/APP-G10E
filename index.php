@@ -1,3 +1,21 @@
+<?php
+
+
+    $_SESSION["loggedin"]=true;
+
+
+?>
+
+<?php
+function deconexion() {
+    $_SESSION["loggedin"]=false;
+}
+
+if (isset($_GET['deconexion'])) {
+    deconexion();
+}
+?>
+
 <!DOCTYPE html>
 <head>
     <title>Bienvenue</title>
@@ -17,9 +35,21 @@
         <li>FAQ</li>
         <li>Nous contactez</li>     
     </ul>
-    <button onclick="location.href = 'login.php'"  type="button">
-        Connexion
-    </button>
+
+        <?php
+        if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == false){
+            echo ' <a  href="login.php">  <button class="connexion">Connexion</button> </a> ';
+
+        } else{
+            echo ' <button>mon compte</button>
+ <a href="index.php?deconexion=true">  <button class="connexion" >Déconnexion</button> </a> ';
+        }
+
+
+        ?>
+
+
+
     </div>
-   
+
 </body>
