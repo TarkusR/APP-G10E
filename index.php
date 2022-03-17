@@ -41,7 +41,7 @@ if (isset($_GET['deconexion'])) {
             echo ' <a  href="login.php">  <button class="connexion">Connexion</button> </a> ';
 
         } else{
-            echo ' <button>mon compte</button>
+            echo ' <a class="monCompte">Mon compte </a>
  <a href="index.php?deconexion=true">  <button class="connexion" >Déconnexion</button> </a> ';
         }
 
