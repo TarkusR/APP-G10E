@@ -10,7 +10,7 @@ if (isset($_SESSION["loggedin"])) {
 <!DOCTYPE html>
 <head>
     <title>Bienvenue</title>
-    <link rel="stylesheet" href="Accueil.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     

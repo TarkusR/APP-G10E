@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Le Produit</title>
-    <link rel="stylesheet" href="LeProduit.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body> 
 
@@ -17,7 +17,7 @@
         <li>FAQ</li>
         <li>Nous contactez</li>
     </ul>
-    <button type="button">
+    <button class="connexion" type="button">
         Connexion
     </button>
 </div>
