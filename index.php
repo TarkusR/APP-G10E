@@ -1,18 +1,9 @@
-<?php
-
-
-    $_SESSION["loggedin"]=true;
-
-
-?>
 
 <?php
-function deconexion() {
-    $_SESSION["loggedin"]=false;
-}
+session_start();
 
-if (isset($_GET['deconexion'])) {
-    deconexion();
+if (isset($_SESSION["loggedin"])) {
+    session_destroy();
 }
 ?>
 
@@ -37,12 +28,10 @@ if (isset($_GET['deconexion'])) {
     </ul>
 
         <?php
-        if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == false){
-            echo ' <a  href="login.php">  <button class="connexion">Connexion</button> </a> ';
-
+        if(isset($_SESSION["loggedin"])){
+            echo ' <a class="monCompte">Mon compte </a> <a href="index.php">  <button class="connexion" >Déconnexion</button> </a> ';
         } else{
-            echo ' <a class="monCompte">Mon compte </a>
- <a href="index.php?deconexion=true">  <button class="connexion" >Déconnexion</button> </a> ';
+            echo ' <a  href="login.php">  <button class="connexion">Connexion</button> </a> ';
         }
 
 
