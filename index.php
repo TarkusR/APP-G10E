@@ -1,9 +1,8 @@
 <?php
-session_start();
 
-if (isset($_SESSION["loggedin"])) {
+session_start();
+if(isset($_GET['logout']))
     session_destroy();
-}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +27,8 @@ if (isset($_SESSION["loggedin"])) {
 
         <?php
         if(isset($_SESSION["loggedin"])){
-            echo ' <a class="monCompte">Mon compte </a> <a href="index.php">  <button class="connexion" >Déconnexion</button> </a> ';
+            echo ' <a class="monCompte">Mon compte </a> ';
+            echo '<a href="logout.php">  <button class="connexion" >Déconnexion</button> </a> ';
         } else{
             echo ' <a  href="login.php">  <button class="connexion">Connexion</button> </a> ';
         }
