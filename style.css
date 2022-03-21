@@ -11,7 +11,7 @@ span{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(0,0,0,0.7);
     border-radius: 20px;
 }
 
@@ -45,6 +45,7 @@ li{
 
 .lienmenu:hover{
     color: rgba(0, 206, 231, 0.8);
+    transition-duration: 0.3s;
 }
 
 .connexion{
@@ -77,6 +78,7 @@ li{
 
 .monCompte:hover{
     color: rgba(0, 206, 231, 0.8);
+    transition-duration: 0.3s;
 }
 
 body{
