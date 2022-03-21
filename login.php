@@ -99,8 +99,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div >
+<body class="login">
+
+<img id="logo" src="logomeasure.png">
+<div class="ElementInscription">
     <h2>Inscription</h2>
     <p>Entrez données.</p>
 
