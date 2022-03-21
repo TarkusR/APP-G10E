@@ -10,7 +10,7 @@ if(isset($_GET['logout']))
     <title>Bienvenue</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="accueil">
     
     <h1> <span>Bienvenue sur l'espace Care-Workplace </span> </h1>
     

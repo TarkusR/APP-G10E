@@ -5,6 +5,8 @@ span{
 
 #logo{
     float: left;
+    height: 150px;
+    width: 150px;
 }
 
 #zone{
@@ -81,6 +83,18 @@ li{
     transition-duration: 0.3s;
 }
 
-body{
+.accueil{
     background-color: grey
+}
+
+.login{
+    background-color: grey;
+
+}
+.ElementInscription{
+    border: 3px rgba(0,0,0,1);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.5);
 }
