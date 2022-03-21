@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <?php
     if(!empty($login_err)){
-        echo '<div class="alert alert-danger">' . $login_err . '</div>';
+        echo '<div>' . $login_err . '</div>';
     }
     ?>
 
@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div >
             <label>Nom de compte</label>
             <input type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-            <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            <span><?php echo $username_err; ?></span>
         </div>
         <div >
             <label>Mots de passe</label>
