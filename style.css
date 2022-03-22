@@ -91,10 +91,13 @@ li{
     background-color: grey;
 
 }
-.ElementInscription{
+.elementInscriptionContainer{
     border: 3px rgba(0,0,0,1);
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     background-color: rgba(255,255,255,0.5);
+    text-align: center;
+
+}
+
+.elementInscription{
+    display: inline-block;
 }

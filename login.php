@@ -102,7 +102,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body class="login">
 
 <img id="logo" src="logomeasure.png">
-<div class="ElementInscription">
+<div class="elementInscriptionContainer">
+    <div class = "elementInscription">
     <h2>Inscription</h2>
     <p>Entrez données.</p>
 
@@ -128,6 +129,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
         <p>Pas de compte ? <a href="register.php">Enregistrez vous maintenant </a>.</p>
     </form>
+    </div>
 </div>
 </body>
 </html>
