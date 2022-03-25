@@ -11,9 +11,7 @@ if(isset($_GET['logout']))
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="accueil">
-    
-    <h1> <span>Bienvenue sur l'espace Care-Workplace </span> </h1>
-    
+
     <div id="zone">
     <div> <img src="logomeasure.png" alt="logomeasure" width="200" height="180" id="logo">  </div>
     <ul>
@@ -27,7 +25,7 @@ if(isset($_GET['logout']))
 
         <?php
         if(isset($_SESSION["loggedin"])){
-            echo ' <a class="monCompte">Mon compte </a> ';
+            echo ' <a href="monCompte.php" class="monCompte">Mon compte </a> ';
             echo '<a href="logout.php">  <button class="connexion" >Déconnexion</button> </a> ';
         } else{
             echo ' <a  href="login.php">  <button class="connexion">Connexion</button> </a> ';
