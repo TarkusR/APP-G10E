@@ -101,9 +101,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body class="login">
 
-<img id="logo" src="logomeasure.png">
+
 <div class="elementInscriptionContainer">
     <div class = "elementInscription">
+        <img width="150 px" height="150 px"  src="logomeasure.png">
     <h2>Inscription</h2>
     <p>Entrez données.</p>
 
