@@ -117,9 +117,61 @@ li{
     display: inline-block;
 }
 .boutonConnexion{
-    background-color: #26D1E3;
-    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: rgba(0, 206, 231, 0.8);
+    border: 1px solid black;
+    padding: 10px;
+}
 
+.boutonConnexion:hover{
+    transition-duration: 0.3s;
+    background-color: black;
+    color: rgba(0, 206, 231, 0.8);
+    cursor: pointer;
+
+}
+
+.centreRegister{
+    text-align: center;
+}
+
+.registerContainer{
+    padding: 60px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #E8E8E8;
+    border-radius: 30px;
+    font-size: 20px ;
+}
+
+.registerOrganisation{
+    align-content: center;
+}
+
+
+.InputRegister{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+.InputRegister:hover{
+    transition-duration: 0.3s;
+    background-color: black;
+    color: white;
+
+}
+
+.seconnecterRegister{
+    text-decoration: none;
 }
 
 /*Fin de la partie qui gère l'inscription et la connexion*/

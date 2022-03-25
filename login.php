@@ -130,7 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input class="boutonConnexion" type="submit"  value="Login">
             </div>
 
-        <p>Pas de compte ? <a href="register.php">Enregistrez vous maintenant </a>.</p>
+        <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a>.</p>
         </div>
 
 
