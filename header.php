@@ -25,7 +25,6 @@
             echo ' <a  href="login.php" class=" lienmenu">  <button class="connexion">Connexion</button> </a> ';
         }
         ?></div>
-
 </div>
 </body>
 </html>
