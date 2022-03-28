@@ -34,6 +34,18 @@ session_start();
 
 
         ?>
+
+        <footer>
+            <div class="contenu-footer">
+                <h1>Nos Services</h1>
+                <ul>
+                    <li>Contact</li>
+                    <li>FAQ</li>
+                </ul>
+
+            </div>
+
+        </footer>
 </div>
 
 </body>
