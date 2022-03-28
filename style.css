@@ -23,7 +23,7 @@ span{
 }
 
 h1{
-    background-color: rgba(165,42,42,0.2);
+    background-color: rgb(145, 53, 53);
     text-align: center;
     flex-grow: 4;
     font-size: 20px;
@@ -172,7 +172,6 @@ li{
     align-content: center;
 }
 
-
 .InputRegister{
     margin-bottom: 10px;
     border-radius: 5px;
@@ -192,12 +191,12 @@ li{
 }
 
 .footer{
-    background:#ccc;
+    background: #40b0ce;
     position: absolute;
     bottom:0;
     width: 100%;
     padding-top:50px;
-    height:50px;
+    height:10px;
 }
 
 /*Fin de la partie qui gère l'inscription et la connexion*/
