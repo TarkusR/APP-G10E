@@ -4,17 +4,22 @@ span{
 }
 
 #logo{
-    float: left;
+    display: flex;
+    flex-direction: row;
+
     height: 150px;
     width: 150px;
 }
 
 #zone{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 20px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(to right, orange, green);
+    border-radius: 50px;
 }
 
 h1{
@@ -40,9 +45,16 @@ li{
 }
 
 .lienmenu{
+    transition-duration: 0.3s ;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: auto;
     color: white;
+    font-size: 130%;
+    font-family: "Arial Black";
     text-decoration: none;
-     cursor: pointer;
+    cursor: pointer;
+    padding-left: 12px;
 }
 
 .lienmenu:hover{
@@ -51,14 +63,12 @@ li{
 }
 
 .connexion{
-    border: 0;
+    transition-duration: 0.3s ;
     text-align: center;
-    font-size: 25px;
-    margin: 60px;
     border-radius: 25px;
     background-color: rgba(0, 206, 231, 0.8);
-    border: 3px solid white;
-    padding: 10px;
+    border: 4px solid white;
+    padding: 15px;
 }
 
 .connexion:hover{

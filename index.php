@@ -19,18 +19,19 @@ if(isset($_GET['logout']))
     <ul>
         <li><a href="index.php" class="lienmenu">Accueil</a></li>
         <li><a href="LeProduit.php" class="lienmenu">Le produit</a></li>
-        <li>Espace Personnel</li>
-        <li>Ludique</li>
-        <li>FAQ</li>
-        <li>Nous contactez</li>     
+        <li class="lienmenu">Espace Personnel</li>
+        <li class="lienmenu">Ludique</li>
+        <li class="lienmenu">FAQ</li>
+        <li class="lienmenu">Nous contactez</li>
+        <li class="lienmenu"> dégage</li>
     </ul>
 
         <?php
         if(isset($_SESSION["loggedin"])){
-            echo ' <a class="monCompte">Mon compte </a> ';
-            echo '<a href="logout.php">  <button class="connexion" >Déconnexion</button> </a> ';
+            echo ' <a class="monCompte lienmenu">Mon compte </a> ';
+            echo '<a href="logout.php" class="lienmenu">  <button class="connexion" >Déconnexion</button> </a> ';
         } else{
-            echo ' <a  href="login.php">  <button class="connexion">Connexion</button> </a> ';
+            echo ' <a  href="login.php" class="lienmenu">  <button class="connexion">Connexion</button> </a> ';
         }
 
 
