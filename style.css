@@ -14,16 +14,16 @@ span{
 #zone{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     align-items: center;
     gap: 20px;
-    background: linear-gradient(to right, orange, red);
+    background: linear-gradient(to right, dodgerblue, grey);
     border-radius: 50px;
 }
 
 h1{
-    background-color: rgba(165,42,42,0.2);
+    background-color: rgb(145, 53, 53);
     text-align: center;
     flex-grow: 4;
     font-size: 20px;
@@ -66,7 +66,7 @@ li{
     transition-duration: 0.3s ;
     text-align: center;
     border-radius: 25px;
-    background-color: rgba(0, 206, 231, 0.8);
+    background-color: rebeccapurple;
     border: 4px solid white;
     padding: 15px;
 }
@@ -94,7 +94,7 @@ li{
 }
 
 .accueil{
-    background-color: grey
+    background-color: white;
 }
 /*Cette partie gère les pages d'inscription et de connexion*/
 
@@ -172,7 +172,6 @@ li{
     align-content: center;
 }
 
-
 .InputRegister{
     margin-bottom: 10px;
     border-radius: 5px;
@@ -192,7 +191,12 @@ li{
 }
 
 .footer{
-    color: cadetblue;
+    background: #40b0ce;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    padding-top:50px;
+    height:10px;
 }
 
 /*Fin de la partie qui gère l'inscription et la connexion*/

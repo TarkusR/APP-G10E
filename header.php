@@ -17,15 +17,14 @@
     <div><a href="index.php" class="lienmenu">Ludique</a></div>
     <div><a href="index.php" class="lienmenu">FAQ</a></div>
     <div><a href="index.php" class="lienmenu">Nous contactez</a></div>
-
-    <?php
-    if(isset($_SESSION["loggedin"])){
-        echo ' <a class="monCompte lienmenu">Mon compte </a> ';
-        echo '<a href="logout.php" class=" lienmenu">  <button class="connexion" >Déconnexion</button> </a> ';
-    } else{
-        echo ' <a  href="login.php" class=" lienmenu">  <button class="connexion">Connexion</button> </a> ';
-    }
-    ?>
+    <div><?php
+        if(isset($_SESSION["loggedin"])){
+            echo ' <a class="monCompte lienmenu">Mon compte </a> ';
+            echo '<a href="logout.php" class=" lienmenu">  <button class="connexion" >Déconnexion</button> </a> ';
+        } else{
+            echo ' <a  href="login.php" class=" lienmenu">  <button class="connexion">Connexion</button> </a> ';
+        }
+        ?></div>
 
 </div>
 </body>
