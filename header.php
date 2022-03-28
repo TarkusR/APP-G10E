@@ -2,13 +2,6 @@
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>header</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 <div id="zone">
     <div> <img src="logomeasure.png" alt="logomeasure" width="200" height="180" id="logo" class="lienmenu"></div>
     <div><a href="index.php" class="lienmenu">Accueil</a></div>
@@ -26,5 +19,3 @@
         }
         ?></div>
 </div>
-</body>
-</html>
