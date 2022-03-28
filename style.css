@@ -188,8 +188,17 @@ li{
     text-decoration: none;
 }
 
+p1{
+
+
+}
+
+a{
+
+}
+
 .footer{
-    background: linear-gradient(#ffffff,#1E90FFFF);
+    background: linear-gradient(#691FFFFF,#1E90FFFF);
     text-align: center;
     position: absolute;
     bottom:0;
