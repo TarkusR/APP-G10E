@@ -6,12 +6,16 @@ if(isset($_GET['logout']))
 ?>
 
 <!DOCTYPE html>
+
 <head>
     <title>Bienvenue</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="accueil">
-    
-    <?php  include "header.php"; ?>
 
+<?php  include "header.php"; ?>
+
+<?php include_once "footer.php" ?>
 </body>
+
+
