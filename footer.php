@@ -7,8 +7,10 @@
 <footer>
 
     <div class="footer">
-        <h1> Contactez nous </h1>
-        <p> Insta / Facebook / Twitter </p>
+        <h1> Contactez-nous </h1>
+        <a href="https://www.instagram.com/alex__gdt/"> Instagram</a>
+        <a href="https://www.facebook.com/babafirefive"> Facebook</a>
+        <a href="https://twitter.com/ZemmourEric"> Twitter</a>
         <h1> Nous trouver </h1>
         <p1> 28 rue Notre Dame des Champs </p1>
         <h1> Notre standing de qualité </h1>
@@ -16,4 +18,7 @@
     </div>
 
 </footer>
+<?php
+include "footer.php";
+?>
 </html>
