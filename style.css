@@ -23,7 +23,7 @@ span{
 }
 
 h1{
-    background-color: rgba(165,42,42,0.2);
+    background-color: rgb(145, 53, 53);
     text-align: center;
     flex-grow: 4;
     font-size: 20px;
@@ -93,7 +93,7 @@ li{
 }
 
 .accueil{
-    background-color: grey
+    background-color: white;
 }
 /*Cette partie gère les pages d'inscription et de connexion*/
 
@@ -101,7 +101,7 @@ li{
 
 .login{
     background-image:
-            url("src/meditationLogin.jpg");
+            url("src/zenGarden.jpg");
     background-position: center;
     backdrop-filter: blur(5px);
     user-select: none; /*Permet de ne pas sélectionner le texte*/
@@ -171,7 +171,6 @@ li{
     align-content: center;
 }
 
-
 .InputRegister{
     margin-bottom: 10px;
     border-radius: 5px;
@@ -191,7 +190,12 @@ li{
 }
 
 .footer{
-    color: cadetblue;
+    background: #40b0ce;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    padding-top:50px;
+    height:10px;
 }
 
 /*Fin de la partie qui gère l'inscription et la connexion*/
