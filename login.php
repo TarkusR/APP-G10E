@@ -115,22 +115,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div >
-            <label>Nom de compte</label>
-            <input type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-            <span><?php echo $username_err; ?></span>
-        </div>
-        <div >
-            <label>Mots de passe</label>
-            <input type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-            <span ><?php echo $password_err; ?></span>
-        </div>
-        <div >
-            <input type="submit"  value="Login">
-        </div>
+        <div class="zoneEntree"></div>
+
+                <label>Nom de compte</label>
+                <input type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <span><?php echo $username_err; ?></span>
+            </div>
+            <div >
+                <label>Mots de passe</label>
+                <input type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <span ><?php echo $password_err; ?></span>
+            </div>
+            <div >
+                <input class="boutonConnexion" type="submit"  value="Login">
+            </div>
+
         <p>Pas de compte ? <a href="register.php">Enregistrez vous maintenant </a>.</p>
+        </div>
+
+
     </form>
     </div>
-</div>
 </body>
 </html>
