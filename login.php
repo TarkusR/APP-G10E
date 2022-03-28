@@ -120,12 +120,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="zoneEntree">
             <div>
                 <label>Nom de compte</label>
-                <input type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <input class="InputRegister" type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span><?php echo $username_err; ?></span>
             </div>
             <div >
                 <label>Mots de passe</label>
-                <input type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input class="InputRegister" type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span ><?php echo $password_err; ?></span>
             </div>
             <div >
