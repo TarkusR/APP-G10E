@@ -23,6 +23,9 @@ span{
 }
 
 h1{
+    font-family: Arial;
+    font-weight: bolder;
+    color: white;
     text-align: center;
     flex-grow: 4;
     font-size: 20px;
@@ -189,21 +192,23 @@ li{
 }
 
 p1{
-
-
+    color: lightskyblue;
 }
 
 a{
-
+    color: #87CEFAFF;
 }
 
 .footer{
+    border-radius: 50px;
     background: linear-gradient(#1E90FFFF,#691FFFFF);
     text-align: center;
     position: absolute;
     bottom:0;
     width: 100%;
-    padding-top:30px;
+    padding-top:50px;
+    padding-block: 2px;
+
     height:200px;
 }
 
