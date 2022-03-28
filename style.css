@@ -18,7 +18,7 @@ span{
     align-content: center;
     align-items: center;
     gap: 20px;
-    background: linear-gradient(to right, dodgerblue, grey);
+    background: linear-gradient(to right, dodgerblue, hsl(260, 100%, 56%));
     border-radius: 50px;
 }
 
@@ -54,7 +54,6 @@ li{
     font-family: "Arial Black";
     text-decoration: none;
     cursor: pointer;
-    padding-left: 12px;
 }
 
 .lienmenu:hover{
@@ -66,14 +65,14 @@ li{
     transition-duration: 0.3s ;
     text-align: center;
     border-radius: 25px;
-    background-color: rebeccapurple;
+    background-color: dodgerblue;
     border: 4px solid white;
     padding: 15px;
 }
 
 .connexion:hover{
     transition-duration: 0.3s;
-    background-color: black;
+    background-color: white;
     color: rgba(0, 206, 231, 0.8);
     cursor: pointer;
 }
