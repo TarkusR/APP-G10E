@@ -115,8 +115,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="zoneEntree"></div>
-
+        <div class="zoneEntree">
+            <div>
                 <label>Nom de compte</label>
                 <input type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span><?php echo $username_err; ?></span>
@@ -130,7 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input class="boutonConnexion" type="submit"  value="Login">
             </div>
 
-        <p>Pas de compte ? <a href="register.php">Enregistrez vous maintenant </a>.</p>
+        <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a>.</p>
         </div>
 
 

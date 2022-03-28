@@ -159,66 +159,75 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>S'enregistrer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div>
-    <h2>S'Enregistrer</h2>
-    <p>Remplissez ce formulaire pour vous inscrire.</p>
+<body class="login">
+<div class="registerContainer">
+    <div class="centreRegister">
+    <h2>Inscription</h2>
+    <p>Veuillez saisir les informations demandées</p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div >
-            <label>Nom de compte</label>
-            <input type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+        </div>
+        <div>
+            <label> Nom de compte : </label> <br>
+
+            <input class="InputRegister"  type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
             <span ><?php echo $username_err; ?></span>
         </div>
         <div >
-            <label>E-mail</label>
-            <input type="text" name="email" <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
+            <label>E-mail :</label> <br>
+            <input class="InputRegister" type="text" name="email" <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
             <span ><?php echo $email_err; ?></span>
         </div>
         <div >
-            <label>Numéro de téléphone</label>
-            <input type="text" name="tel" <?php echo (!empty($tel_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $tel; ?>">
+            <label>Numéro de téléphone :</label> <br>
+            <input class="InputRegister" type="text" name="tel" <?php echo (!empty($tel_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $tel; ?>">
             <span ><?php echo $tel_err; ?></span>
         </div>
         <div >
-            <label>Nom</label>
-            <input type="text" name="nom" <?php echo (!empty($nom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nom; ?>">
+            <label>Nom :</label> <br>
+            <input class="InputRegister" type="text" name="nom" <?php echo (!empty($nom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nom; ?>">
             <span ><?php echo $nom_err; ?></span>
         </div>
-        <div >
-            <label>Prenom</label>
-            <input type="text" name="prenom" <?php echo (!empty($prenom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prenom; ?>">
+        <div>
+            <label>Prénom :</label> <br>
+            <input class="InputRegister" type="text" name="prenom" <?php echo (!empty($prenom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prenom; ?>">
             <span ><?php echo $prenom_err; ?></span>
         </div>
         <div >
-            <label>Date de naissance</label>
-            <input type="date" name="dateNai" <?php echo (!empty($dateNai_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $dateNai; ?>">
+            <label>Date de naissance :</label> <br>
+            <input class="InputRegister" type="date" name="dateNai" <?php echo (!empty($dateNai_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $dateNai; ?>">
             <span ><?php echo $dateNai_err; ?></span>
         </div>
         <div>
-            <input type="radio" name="sex" id="homme" value="homme" />
+            <label>Sex :</label> <br>
+            <input class="InputRegister" type="radio" name="sex" id="homme" value="homme" />
             <label for="homme">Homme</label>
 
-            <input type="radio" name="sex" id="femme" value="femme" />
+            <input class="InputRegister" type="radio" name="sex" id="femme" value="femme" />
             <label for="femme">Femme</label>
+
+            <input class="InputRegister" type="radio" name="sex" id="unexpresed" value="unexpresed"/>
+            <label for="unexpresed"> Ne préfère pas dire</label>
         </div>
         <div >
-            <label>Mots de passe</label>
-            <input type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+            <label>Mots de passe :</label> <br>
+            <input class="InputRegister" type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
             <span ><?php echo $password_err; ?></span>
         </div>
         <div >
-            <label>Confirmer mots de passe</label>
-            <input type="password" name="confirm_password" <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
+            <label>Confirmez le mots de passe :</label> <br>
+            <input class="InputRegister" type="password" name="confirm_password" <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
             <span ><?php echo $confirm_password_err; ?></span>
         </div>
         <div >
-            <input type="submit" value="Confirmer">
-            <input type="reset"  value="Reinitialiser">
+            <input class="boutonConnexion" type="submit" value="Confirmer">
+            <input class="boutonConnexion" type="reset"  value="Reinitialiser">
         </div>
-        <p>Vous posseder deja un compte ? <a href="login.php">Se connecter</a>.</p>
+        <p>Possédez-vous déjà un compte ? <a href="login.php" class="seconnecterRegister">Connectez-vous ici</a></p>
     </form>
 </div>
 </body>
