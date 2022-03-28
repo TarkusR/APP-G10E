@@ -4,48 +4,15 @@ session_start();
 
 ?>
 
-
 <!DOCTYPE html>
 <head>
     <title>Le Produit</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
+<body>
 
-    <h1> <span>Le Produit</span> </h1>
-    
-    <div id="zone">
-    <div> <img src="logomeasure.png" alt="logomeasure" width="200" height="180" id="logo">  </div>
-    <ul>
-        <li><a href="index.php" class="lienmenu">Accueil</a></li>
-        <li><a href="LeProduit.php" class="lienmenu">Le produit</a></li>
-        <li>Espace Personnel</li>
-        <li>Ludique</li>
-        <li>FAQ</li>
-        <li>Nous contactez</li>
-    </ul>
-        <?php
-        if(isset($_SESSION["loggedin"])){
-            echo ' <a class="monCompte">Mon compte </a> ';
-            echo '<a href="logout.php">  <button class="connexion" >Déconnexion</button> </a> ';
-        } else{
-            echo ' <a  href="login.php">  <button class="connexion">Connexion</button> </a> ';
-        }
+<?php  include "header.php"; ?>
 
-
-        ?>
-
-        <footer>
-            <div class="contenu-footer">
-                <h1>Nos Services</h1>
-                <ul>
-                    <li>Contact</li>
-                    <li>FAQ</li>
-                </ul>
-
-            </div>
-
-        </footer>
-</div>
+<?php include_once "footer.php" ?>
 
 </body>
