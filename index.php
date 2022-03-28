@@ -12,8 +12,6 @@ if(isset($_GET['logout']))
 </head>
 <body class="accueil">
     
-    <h1> <span>Bienvenue sur l'espace Care-Workplace </span> </h1>
-    
     <?php  include "header.php"; ?>
 
 </body>
