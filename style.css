@@ -47,13 +47,13 @@ li{
 }
 
 .lienmenu{
-    transition-duration: 0.3s ;
+    transition-duration: 0.2s ;
     justify-content: center;
     flex-grow: 1;
     flex-basis: auto;
     color: white;
     font-size: 130%;
-    font-family: "Arial Black";
+    font-family: "Arial";
     text-decoration: none;
     cursor: pointer;
 }
@@ -192,12 +192,28 @@ li{
 }
 
 p1{
-    color: lightskyblue;
+    color: #ffffff;
 }
 
 a{
     color: #87CEFAFF;
     text-decoration: none;
+}
+
+.f{
+    color: white;
+    transition-duration: 0.2s ;
+    cursor: pointer;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: auto;
+    font-family: "Arial";
+    font-size: 80%;
+}
+
+.f:hover{
+    color: rgba(0, 206, 231, 0.8);
+    transition-duration: 0.3s;
 }
 
 .footer{
@@ -206,11 +222,11 @@ a{
     text-align: center;
     position: absolute;
     bottom:0;
-    width: 100%;
+    width: 98.7%;
     padding-top:50px;
     padding-block: 30px;
-
     height:200px;
+
 }
 
 /*Fin de la partie qui gère l'inscription et la connexion*/
