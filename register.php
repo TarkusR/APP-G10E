@@ -204,15 +204,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
         <div>
             <label>Sex :</label> <br>
-            <input class="InputRegister" type="radio" name="sex" id="homme" value="homme" />
+            <input  type="radio" name="sex" id="homme" value="homme" />
             <label for="homme">Homme</label>
 
-            <input class="InputRegister" type="radio" name="sex" id="femme" value="femme" />
+            <input  type="radio" name="sex" id="femme" value="femme" />
             <label for="femme">Femme</label>
 
-            <input class="InputRegister" type="radio" name="sex" id="unexpresed" value="unexpresed"/>
+            <input type="radio" name="sex" id="unexpresed" value="unexpresed"/>
             <label for="unexpresed"> Ne préfère pas dire</label>
         </div>
+    <br>
         <div >
             <label>Mots de passe :</label> <br>
             <input class="InputRegister" type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
@@ -223,7 +224,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <input class="InputRegister" type="password" name="confirm_password" <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
             <span ><?php echo $confirm_password_err; ?></span>
         </div>
-        <div >
+        <div class="centreRegister">
             <input class="boutonRegister" type="submit" value="Confirmer">
             <input class="boutonRegister" type="reset"  value="Reinitialiser">
         </div>
