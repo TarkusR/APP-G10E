@@ -111,7 +111,7 @@ li{
     justify-content: center;
     align-items: center;
     height: 100vh;  /*Mettre le tout au centre*/
-    overflow-y: hidden; /*cacher la barre de navigation*/
+    /*overflow-y: hidden;*/ /*cacher la barre de navigation*/
 
 }
 
@@ -176,6 +176,10 @@ li{
     margin-bottom: 10px;
     border-radius: 15px;
     background-color: white;
+    border: none;
+    width: 75%;
+    height: 30px;
+    padding-left: 4%;
 }
 
 .InputRegister:hover{
@@ -210,7 +214,7 @@ li{
     transition-duration: 0.3s;
     color: blue;
 }
-
+/*Fin de la partie qui gère l'inscription et la connexion*/
 p1{
     color: #ffffff;
 }
@@ -249,4 +253,3 @@ a{
 
 }
 
-/*Fin de la partie qui gère l'inscription et la connexion*/
