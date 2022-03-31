@@ -111,7 +111,7 @@ li{
     justify-content: center;
     align-items: center;
     height: 100vh;  /*Mettre le tout au centre*/
-    overflow-y: hidden; /*cacher la barre de navigation*/
+    /*overflow-y: hidden;*/ /*cacher la barre de navigation*/
 
 }
 
@@ -175,9 +175,13 @@ li{
 
 .InputRegister{
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: white;
-    
+    border: none;
+    height: 30px;
+    width: 75%;
+    padding-left: 5%;
+
 }
 
 .InputRegister:hover{
