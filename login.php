@@ -115,9 +115,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo '<div>' . $login_err . '</div>';
     }
     ?>
-
+    </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div >
+        <div>
             <div>
                 <label>Nom de compte</label> <br>
                 <input class="InputRegister" type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
@@ -128,15 +128,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input class="InputRegister" type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span ><?php echo $password_err; ?></span>
             </div>
-            <div >
-                <input class="boutonConnexion" type="submit"  value="Login">
+            <div  class="centreRegister">
+                <input class="boutonRegister" type="submit"  value="Login">
             </div>
-
-        <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a>.</p>
+            <div class="centreRegister">
+        <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a></p>
+            </div>
         </div>
 
 
     </form>
-    </div>
 </body>
 </html>

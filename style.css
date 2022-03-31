@@ -86,7 +86,7 @@ li{
     text-align: center;
     padding: 65px 0px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 130%;
 }
 
 .monCompte:hover{
@@ -111,7 +111,7 @@ li{
     justify-content: center;
     align-items: center;
     height: 100vh;  /*Mettre le tout au centre*/
-    /*overflow-y: hidden;*/ /*cacher la barre de navigation*/
+    overflow-y: hidden; /*cacher la barre de navigation*/
 
 }
 
@@ -123,7 +123,6 @@ li{
     background-color: rgba(232,232,232,0.8);
     text-align: center;
     border-radius: 25px;
-
 }
 .zoneEntree{
     justify-content: center;
@@ -150,7 +149,6 @@ li{
     background-color: black;
     color: rgba(0, 206, 231, 0.8);
     cursor: pointer;
-
 }
 
 .centreRegister{
@@ -174,27 +172,45 @@ li{
 }
 
 .InputRegister{
+    transition-duration: 0.3s;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: white;
-    border: none;
-    height: 30px;
-    width: 75%;
-    padding-left: 5%;
-
 }
 
 .InputRegister:hover{
     transition-duration: 0.3s;
-    background-color: black;
-    color: white;
+    background-color: darkgray;
+}
 
+.boutonRegister{
+    transition-duration: 0.3s;
+    border: 0;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: forestgreen;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.boutonRegister:hover{
+    transition-duration: 0.3s;
+    background-color: springgreen;
 }
 
 .seconnecterRegister{
+    transition-duration: 0.3s;
+    color: forestgreen;
     text-decoration: none;
 }
-/*Fin de la partie qui gère l'inscription et la connexion*/
+
+.seconnecterRegister:hover{
+    transition-duration: 0.3s;
+    color: blue;
+}
+
 p1{
     color: #ffffff;
 }
@@ -233,3 +249,4 @@ a{
 
 }
 
+/*Fin de la partie qui gère l'inscription et la connexion*/
