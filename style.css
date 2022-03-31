@@ -177,7 +177,7 @@ li{
     margin-bottom: 10px;
     border-radius: 5px;
     background-color: white;
-
+    
 }
 
 .InputRegister:hover{
@@ -190,7 +190,7 @@ li{
 .seconnecterRegister{
     text-decoration: none;
 }
-
+/*Fin de la partie qui gère l'inscription et la connexion*/
 p1{
     color: #ffffff;
 }
@@ -229,4 +229,3 @@ a{
 
 }
 
-/*Fin de la partie qui gère l'inscription et la connexion*/

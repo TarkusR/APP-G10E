@@ -103,9 +103,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     
-<div class="elementInscriptionContainer">
+<div class="registerContainer">
 
-    <div class = "elementInscription">
+    <div class = "centreRegister">
         <img width="150 px" height="150 px"  src="logomeasure.png">
     <h2>Connexion</h2>
     <p>Entrez données.</p>
@@ -117,14 +117,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="zoneEntree">
+        <div >
             <div>
-                <label>Nom de compte</label>
+                <label>Nom de compte</label> <br>
                 <input class="InputRegister" type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span><?php echo $username_err; ?></span>
             </div>
             <div >
-                <label>Mots de passe</label>
+                <label>Mots de passe</label> <br>
                 <input class="InputRegister" type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span ><?php echo $password_err; ?></span>
             </div>
