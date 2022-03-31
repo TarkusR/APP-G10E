@@ -224,8 +224,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <span ><?php echo $confirm_password_err; ?></span>
         </div>
         <div >
-            <input class="boutonConnexion" type="submit" value="Confirmer">
-            <input class="boutonConnexion" type="reset"  value="Reinitialiser">
+            <input class="boutonRegister" type="submit" value="Confirmer">
+            <input class="boutonRegister" type="reset"  value="Reinitialiser">
         </div>
         <p>Possédez-vous déjà un compte ? <a href="login.php" class="seconnecterRegister">Connectez-vous ici</a></p>
     </form>

@@ -129,10 +129,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span ><?php echo $password_err; ?></span>
             </div>
             <div >
-                <input class="boutonConnexion" type="submit"  value="Login">
+                <input class="boutonRegister" type="submit"  value="Login">
             </div>
 
-        <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a>.</p>
+        <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a></p>
         </div>
 
 
