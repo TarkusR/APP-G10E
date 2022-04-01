@@ -223,6 +223,10 @@ a{
     text-decoration: none;
 }
 
+h1{
+    color: white;
+}
+
 .f{
     color: white;
     transition-duration: 0.2s ;
@@ -240,7 +244,6 @@ a{
 }
 
 .footer{
-    float: left;
     border-radius: 50px;
     background: linear-gradient(#1E90FFFF,#691FFFFF);
     text-align: center;
@@ -255,13 +258,17 @@ a{
 
 reseaux{
     float: left;
+    width: 20%;
 }
 
 information{
     float: left;
+    text-align: center;
+    width: 60%;
 }
 
 contact{
     float: left;
+    width: 20%;
 }
 
