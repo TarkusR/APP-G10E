@@ -9,7 +9,7 @@
     <div><a href="index.php" class="lienmenu">Espace Personnel</a></div>
     <div><a href="index.php" class="lienmenu">Ludique</a></div>
     <div><a href="index.php" class="lienmenu">FAQ</a></div>
-    <div><a href="index.php" class="lienmenu">Nous contactez</a></div>
+    <div><a href="nousContactez" class="lienmenu">Nous contactez</a></div>
     <div><?php
         if(isset($_SESSION["loggedin"])){
             echo ' <a class="lienmenu monCompte">Mon compte </a> ';
