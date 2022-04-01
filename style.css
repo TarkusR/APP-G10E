@@ -240,6 +240,7 @@ a{
 }
 
 .footer{
+    float: left;
     border-radius: 50px;
     background: linear-gradient(#1E90FFFF,#691FFFFF);
     text-align: center;
@@ -250,5 +251,17 @@ a{
     padding-block: 30px;
     height:200px;
 
+}
+
+reseaux{
+    float: left;
+}
+
+information{
+    float: left;
+}
+
+contact{
+    float: left;
 }
 
