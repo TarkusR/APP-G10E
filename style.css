@@ -25,7 +25,7 @@ span{
 .titreFooter{
     font-family: Arial;
     font-weight: bolder;
-    color: white;
+    color: White;
     text-align: center;
     flex-grow: 4;
     font-size: 20px;
@@ -214,8 +214,8 @@ li{
     color: blue;
 }
 /*Fin de la partie qui gère l'inscription et la connexion*/
-p1{
-    color: #ffffff;
+.textFooter{
+    color: white;
 }
 
 a{
@@ -223,9 +223,6 @@ a{
     text-decoration: none;
 }
 
-h1{
-    color: white;
-}
 
 .f{
     color: white;
@@ -244,6 +241,9 @@ h1{
 }
 
 .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     border-radius: 50px;
     background: linear-gradient(#1E90FFFF,#691FFFFF);
     text-align: center;
@@ -252,8 +252,7 @@ h1{
     width: 98.7%;
     padding-top:50px;
     padding-block: 30px;
-    height:200px;
-
+    height:100px;
 }
 
 reseaux{
@@ -271,4 +270,11 @@ contact{
     float: left;
     width: 20%;
 }
+
+.footerOrga{
+  display: flex;
+    flex-direction: row;
+}
+
+
 
