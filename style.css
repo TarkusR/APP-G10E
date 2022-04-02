@@ -255,21 +255,6 @@ a{
     height:100px;
 }
 
-reseaux{
-    float: left;
-    width: 20%;
-}
-
-information{
-    float: left;
-    text-align: center;
-    width: 60%;
-}
-
-contact{
-    float: left;
-    width: 20%;
-}
 
 .footerOrga{
   display: flex;
