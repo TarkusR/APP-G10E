@@ -8,7 +8,7 @@
     <div><a href="LeProduit.php" class="lienmenu">Le produit</a></div>
     <div><a href="index.php" class="lienmenu">Espace Personnel</a></div>
     <div><a href="index.php" class="lienmenu">Ludique</a></div>
-    <div><a href="index.php" class="lienmenu">FAQ</a></div>
+    <div><a href="FAQ.php" class="lienmenu">FAQ</a></div>
     <div><a href="nousContactez.php" class="lienmenu">Nous contactez</a></div>
     <div><?php
         if(isset($_SESSION["loggedin"])){
