@@ -218,6 +218,29 @@ li{
     color: white;
 }
 
+.InputContact{
+    transition-duration: 0.3s;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.InputContact:hover{
+    transition-duration: 0.3s;
+    background-color: darkgrey;
+}
+
+.textContact{
+    line-height: 1.5;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    width: 70%;
+}
+
+
+/*Début footer*/
 a{
     color: #87CEFAFF;
     text-decoration: none;
