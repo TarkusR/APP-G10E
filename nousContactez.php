@@ -25,6 +25,7 @@ if(isset($_SESSION["loggedin"])){
     <label>Objet du message :</label>
     <input class="InputContact" type="text">
     </div>
+
         <p> Votre message : </p>
         <textarea rows="10" placeholder="Exprimez-vous" class="textContact"> </textarea>
 
