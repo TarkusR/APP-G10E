@@ -262,6 +262,10 @@ a{
 }
 
 /*Section dédiée à la page FAQ*/
+.FAQbody h2{
+    display: flex;
+    justify-content: center;
+}
 .faq {
     background-color: #eee;
     color: #444;
@@ -275,7 +279,7 @@ a{
     transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.active, .faq:hover {
     background-color: #ccc;
 }
 
@@ -285,5 +289,6 @@ a{
     background-color: white;
     overflow: hidden;
 }
+
 
 /*Fin section dédiée aux FAQ*/
