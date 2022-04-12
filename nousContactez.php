@@ -21,9 +21,12 @@ if(isset($_SESSION["loggedin"])){
     <?php  include "header.php"; ?>
 
         <h1 class>Vous pouvez nous contactez en remplissant les informations ci-dessous :</h1>
+    <div class="centreRegister">
     <label>Objet du message :</label>
-    <input class="" type="text">
-
+    <input class="InputContact" type="text">
+    </div>
+        <p> Votre message : </p>
+        <textarea rows="10" placeholder="Exprimez-vous" class="textContact"> </textarea>
 
 
     <?php include_once "footer.php" ?>
