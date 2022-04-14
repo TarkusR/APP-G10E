@@ -218,6 +218,7 @@ li{
     color: white;
 }
 
+
 .InputContact{
     transition-duration: 0.3s;
     border-radius: 15px;
@@ -231,7 +232,7 @@ li{
 }
 
 .textContact{
-    line-height: 1.5;
+    line-height: 150%;
 
     border-radius: 5px;
     border: 1px solid #ccc;
