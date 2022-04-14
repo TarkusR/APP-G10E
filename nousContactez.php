@@ -29,7 +29,8 @@ if(isset($_SESSION["loggedin"])){
         <p> Votre message : </p>
         <textarea rows="10" placeholder="Exprimez-vous" class="textContact"> </textarea>
     <div class="centreRegister">
-        <button class="boutonConnexion">Envoyer</button>
+        <br>
+        <button class="boutonContact">Envoyer</button>
     </div>
     </div>
     <?php include_once "footer.php" ?>
