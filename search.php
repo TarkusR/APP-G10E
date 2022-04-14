@@ -6,11 +6,6 @@
 <?php
    session_start();
 if(isset($_SESSION["loggedin"])){
-
-} else{
-    header('Location:login.php');
-    exit();
-}
 $host = "Votre serveur de base de données";
 $user = "Votre nom d'utilisateur";
 $password = "Votre mot de passe";
@@ -28,6 +23,10 @@ $query = "CREATE TABLE search (
 mysql_query($query) or die ("Erreur de modification de  la table");
 // on ferme la base
 mysql_close();
+} else{
+    header('Location:login.php');
+    exit();
+}   
 ?>
 </body>
 </html>
