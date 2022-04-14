@@ -6,10 +6,14 @@
 <?php
    session_start();
 if(isset($_SESSION["loggedin"])){
-$host = "Votre serveur de base de données";
-$user = "Votre nom d'utilisateur";
-$password = "Votre mot de passe";
-$bdd = "Votre base de données sur le serveur";
+   define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'bdd');
+$host = "localhost";
+$user = "root";
+$password = "";
+$bdd = "bdd";
 mysql_connect($host, $user, $password) or die ("Connexion au serveur impossible");
 // on choisit la bonne base
 mysql_select_db($bdd) or die ("Connexion a la base impossible");
