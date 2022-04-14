@@ -13,14 +13,14 @@ if(isset($_SESSION["loggedin"])){
 
 <head>
 
-    <title>Nous Contactez</title>
+    <title>Nous Contacter</title>
     <link rel="stylesheet" href="style.css" >
 
 </head>
     <body>
     <?php  include "header.php"; ?>
 
-        <h1 class>Vous pouvez nous contactez en remplissant les informations ci-dessous :</h1>
+        <h1 class>Vous pouvez nous contacter en remplissant les informations ci-dessous :</h1>
     <div class="">
     <div class="centreRegister">
     <label>Objet du message :</label>
