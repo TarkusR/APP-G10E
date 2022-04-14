@@ -6,10 +6,7 @@
 <?php
    session_start();
 if(isset($_SESSION["loggedin"])){
-   define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'bdd');
+
 $host = "localhost";
 $user = "root";
 $password = "";
