@@ -4,6 +4,13 @@
 </head>
 <body>
 <?php
+   session_start();
+if(isset($_SESSION["loggedin"])){
+
+} else{
+    header('Location:login.php');
+    exit();
+}
 $host = "Votre serveur de base de données";
 $user = "Votre nom d'utilisateur";
 $password = "Votre mot de passe";
