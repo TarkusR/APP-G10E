@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validation des données de login
     if(empty($username_err) && empty($password_err)){
         // on prepare un select
-        $sql = "SELECT idUser , username, password FROM utilisateur WHERE username = ?";
+        $sql = "SELECT idUser , username, password, admin, mail, phoneNumber, firstName, name, dateNaissance, sex FROM utilisateur WHERE username = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Lie les parametres a la requetes
@@ -52,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Verifie si le nom de compte existe
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     // lie les resultats a la variable
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $admin, $mail, $phoneNumber, $firstName,$name, $dateNaissance, $sex);
 
                     if(mysqli_stmt_fetch($stmt)){
                         echo $password;
@@ -64,7 +64,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            //$_SESSION["phone"]
+                            $_SESSION['admin']=$admin;
+                            $_SESSION["mail"]= $mail;
+                            $_SESSION["phoneNumber"]=$phoneNumber;
+                            $_SESSION["firstName"]=$firstName;
+                            $_SESSION["name"]=$name;
+                            $_SESSION["dateNaissance"]=$dateNaissance;
+                            $_SESSION["sex"]=$sex;
 
                             // Redirige vers la page d'acceuil
                             header("location: index.php");
@@ -117,7 +123,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div>
+        <div >
             <div>
                 <label>Nom de compte</label> <br>
                 <input class="InputRegister" type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
@@ -132,7 +138,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input class="boutonRegister" type="submit"  value="Login">
             </div>
             <div class="centreRegister">
-        <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a></p>
+            <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a></p>
             </div>
         </div>
 

@@ -94,9 +94,14 @@ li{
     transition-duration: 0.3s;
 }
 
+/*Cette partie gère la page d'acceuil*/
+
 .accueil{
-    background-color: white;
+    background: url("openSpace.jpg");
 }
+
+
+
 /*Cette partie gère les pages d'inscription et de connexion*/
 
 
