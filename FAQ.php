@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="FAQbody">
+<?php  include "header.php"; ?>
+
     <h2>FAQ</h2>
 
     <button class="faq">Comment utiliser le capteur cardiaque?</button>
@@ -24,6 +26,7 @@
             <p>Nous nous occupons de la maintenance tous les 3 ans</p>
         </div>
 
+<?php  include "footer.php"; ?>
 
 
 </body>
