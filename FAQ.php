@@ -8,7 +8,6 @@
 </head>
 <body class="FAQbody">
 <?php  include "header.php"; ?>
-
     <h2>FAQ</h2>
 
     <button class="faq">Comment utiliser le capteur cardiaque?</button>
@@ -27,7 +26,6 @@
         </div>
 
 <?php  include "footer.php"; ?>
-
 
 </body>
 </html>
