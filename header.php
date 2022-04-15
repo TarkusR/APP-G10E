@@ -12,7 +12,7 @@
     <div><a href="nousContactez.php" class="lienmenu">Nous contacter</a></div>
     <div><?php
         if(isset($_SESSION["loggedin"])){
-            echo ' <a class="lienmenu monCompte">Mon compte </a> ';
+            echo ' <a href="monCompte.php" class="lienmenu monCompte">Mon compte </a> ';
             echo '<a href="logout.php" class=" lienmenu">  <button class="connexion" >Déconnexion</button> </a> ';
         } else{
             echo ' <a  href="login.php" class=" lienmenu">  <button class="connexion">Connexion</button> </a> ';
