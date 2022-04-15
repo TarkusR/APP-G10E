@@ -7,14 +7,10 @@
    session_start();
 if(isset($_SESSION["loggedin"])){
 
-} else{
-    header('Location:login.php');
-    exit();
-}
-$host = "Votre serveur de base de données";
-$user = "Votre nom d'utilisateur";
-$password = "Votre mot de passe";
-$bdd = "Votre base de données sur le serveur";
+$host = "localhost";
+$user = "root";
+$password = "";
+$bdd = "bdd";
 mysql_connect($host, $user, $password) or die ("Connexion au serveur impossible");
 // on choisit la bonne base
 mysql_select_db($bdd) or die ("Connexion a la base impossible");
@@ -28,6 +24,10 @@ $query = "CREATE TABLE search (
 mysql_query($query) or die ("Erreur de modification de  la table");
 // on ferme la base
 mysql_close();
+} else{
+    header('Location:login.php');
+    exit();
+}   
 ?>
 </body>
 </html>
