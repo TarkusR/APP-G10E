@@ -218,6 +218,24 @@ li{
     color: white;
 }
 
+/*Partie le produit */
+
+.produitOrga{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imgProduit{
+    width: 20%;
+    height: auto;
+}
+
+.textProduit{
+    font-size: 130%;
+}
+
+/*Partie Contact*/
 
 .InputContact{
     transition-duration: 0.3s;
