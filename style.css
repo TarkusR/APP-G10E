@@ -347,5 +347,10 @@ a{
     overflow: hidden;
 }
 
-
+.faq:hover .reponse{
+    display: block;
+}
+.faq:hover .reponse{
+    display: block;
+}
 /*Fin section dédiée aux FAQ*/
