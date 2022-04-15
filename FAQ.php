@@ -18,7 +18,7 @@ session_start();
 
     <button class="faq">Comment vous contacter?</button>
         <div class="reponse">
-            <p>Une section est dédiée à cela sur notre site</p>
+            <p>Une section est dédiée à cela sur notre site, il vous suffit de vous rendre sur la page "Nous Contacter"</p>
         </div>
 
     <button class="faq">Comment effectuer la maintenance de vos produits?</button>
