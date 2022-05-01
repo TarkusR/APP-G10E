@@ -120,7 +120,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err) && empty($tel_err) && empty($nom_err)){
 
         // on fait un insert
-        $sql = "INSERT INTO utilisateur (username, password, mail, phoneNumber, name, firstName, dateNaissance, sex) VALUES (?, ?, ?, ?, ?, ?, ?,?)";
+        $sql = "INSERT INTO utilisateur (username, password, mail, phoneNumber, name, firstName, dateNaissance, sex) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Lie les variables au requetes sql

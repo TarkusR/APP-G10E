@@ -2,6 +2,8 @@
 // Creer la session
 session_start();
 
+$link = '' ;
+
 // Verifie si l'utilisateur est deja login
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: index.php");
@@ -37,6 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // on prepare un select
         $sql = "SELECT idUser , username, password, admin, mail, phoneNumber, firstName, name, dateNaissance, sex FROM utilisateur WHERE username = ?";
 
+
         if($stmt = mysqli_prepare($link, $sql)){
             // Lie les parametres a la requetes
             mysqli_stmt_bind_param($stmt, "s", $param_username);
@@ -57,6 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(mysqli_stmt_fetch($stmt)){
                         echo $password;
                         if(password_verify($password, $hashed_password)){
+
                             // Si le mots de passe est correct on lance une session
                             session_start();
 
