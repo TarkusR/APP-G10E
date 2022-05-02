@@ -664,10 +664,15 @@ section .wave.wave3{
 
 /* Mon Compte */
 
+.account-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .account-descriptor-container{
     margin-top: 15vh;
     margin-left: 10vw;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     display: flex;
     flex-direction: row;
 }
@@ -687,4 +692,17 @@ section .wave.wave3{
 .account-descriptor-usable{
     margin-left: 15vh;
     text-align: right;
+}
+
+.chart-container {
+    margin-top: 15vh;
+    margin-left: 15vw;
+    width: 640px;
+    height: auto;
+}
+
+.admin-search-bar-container h1, h2 , p{
+    color: black;
+    font-weight: normal;
+    text-align: center;
 }

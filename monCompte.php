@@ -7,11 +7,14 @@ session_start();
 <head>
     <title>Mon Compte</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body class="accueil">
 <?php
 include_once "header.php"
 ?>
+<div class="account-container">
 <div class="account-descriptor-container">
     <div class="account-descriptor-text">
         <h1>Information de compte</h1>
@@ -21,8 +24,29 @@ include_once "header.php"
             echo '<div class="account-descriptor-title"><p> Numéro de telephone :</p><p class="account-descriptor-usable">+33'.$_SESSION['phoneNumber'].'</p></div>';
             echo '<div class="account-descriptor-title"><p> Date de naissance :</p><p class="account-descriptor-usable">'.$_SESSION['dateNaissance'].'</p></div>';
             echo '<div class="account-descriptor-title"><p> Sexe :</p><p class="account-descriptor-usable">'.$_SESSION['sex'].'</p></div>';
-
+            echo '<div class="account-descriptor-title"><p> Adresse E-mail :</p><p class="account-descriptor-usable">'.$_SESSION['mail'].'</p></div>';
+            echo '<div class="account-descriptor-title"><p> Mots de passe :</p><p class="account-descriptor-usable"> ********</p></div>';
+            if($_SESSION['admin']==1){
+                echo '<div class="account-descriptor-title"><p>Compte : </p><p class="account-descriptor-usable" style="color: red"> Admin </p></div>';
+            } else{
+                echo '<div class="account-descriptor-title"><p>Compte : </p><p class="account-descriptor-usable"> Utilisateur </p></div>';
+            }
             ?>
+    </div>
+    <div class="account-data-container">
+        <div class="chart-container">
+            <canvas id="mycanvas"></canvas>
+
+        </div>
+        <!-- javascript -->
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/chart.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </div>
+</div>
+    <div class="admin-search-bar-container">
+        <h1>Rechercher un utilisateur</h1>
+
     </div>
 </div>
 </body>
