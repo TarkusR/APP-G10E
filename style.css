@@ -369,6 +369,11 @@ a{
     display: flex;
     justify-content: center;
 }
+.FAQbody{
+    display: flex;
+    flex-direction: column;
+
+}
 .faq {
     background-color: #eee;
     color: #444;
