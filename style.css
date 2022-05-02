@@ -1,5 +1,5 @@
 span{
-    margin-left: 50px;
+    margin-left: 0px;
     font-size: 30px;
 }
 
@@ -11,16 +11,29 @@ span{
     width: 150px;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .zone{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-content: center;
     align-items: center;
+    position: fixed;
     height: auto;
+    top: 0;
+    backdrop-filter: blur(25px);
+    padding: 0;
+    opacity: 0.90;
     width: 100%;
+    z-index: 9999;
     background: linear-gradient(to right, dodgerblue, hsl(260, 100%, 56%));
 }
+
+
 
 .titreFooter{
     font-family: Arial;
@@ -46,8 +59,12 @@ li{
     font-size: 25px;
 }
 
-header{
-    top: 0;
+h1, h2, h3, h4{
+    font-family: Arial;
+    font-weight: bolder;
+    color: white;
+    flex-grow: 4;
+
 }
 
 .lienmenu{
@@ -310,17 +327,19 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-radius: 50px;
     background: linear-gradient(#1E90FFFF,#691FFFFF);
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom:0;
-    width: 98.7%;
-    padding-top:50px;
-    padding-block: 30px;
+    margin : 0;
+    width: 100%;
+    padding : 0;
     bottom: 0%;
 }
 
+footer{
+    padding: -5px;
+}
 
 .footerOrga{
   display: flex;
@@ -363,3 +382,191 @@ a{
     display: block;
 }
 /*Fin section dédiée aux FAQ*/
+
+/* Page d'acceuil */
+
+
+.content-text{
+    width: 100%;
+    margin-top: 35vh;
+}
+
+div.content-text {
+    width:40%;
+    overflow:hidden;
+}
+div.content-text h1, h2, h3 {
+    animation: 1s slide-right, fadeIn 1s;
+
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        margin-left: -100%;
+        width: 300%;
+
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0%;
+        width: 100%;
+
+    }
+}
+.content-outside{
+    position: relative;
+    height: 100%;
+    margin-left: 20vw;
+    z-index: 999;
+
+
+}
+
+
+
+.content-image{
+    transform: scale(0.2,0.35);
+    border-radius: 50%;
+
+}
+
+section{
+    position: relative;
+    width : 100%;
+    height: 90vh;
+    background: linear-gradient(to right, dodgerblue, hsl(260, 80%, 56%));
+    overflow: hidden;
+
+}
+
+section .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("src/wave.png");
+    background-size: 1250px 100px ;
+}
+
+section .wave.wave1{
+    animation: animate 90s linear infinite;
+    opacity : 0.25;
+    animation-delay: 0s;
+    bottom : 0;
+}
+
+@keyframes animate {
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+section .wave.wave2{
+    animation: animate2 60s linear infinite;
+    opacity : 0.35;
+    animation-delay: -5s;
+    bottom : 0px;
+}
+
+@keyframes animate2 {
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+section .wave.wave3{
+    animation: animate3 75s linear infinite;
+    opacity : 0.15;
+    animation-delay: -10s;
+    bottom : 0px;
+}
+
+@keyframes animate3 {
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+#btn {
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 56%));;
+    height: 50px;
+    width : 200px;
+    min-width: 150px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-family: 'Arial';
+    position: relative;
+    margin-left: 0;
+    transition: 1s;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+#btn #circle {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    transition: 700ms;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#btn:hover {
+    opacity: 1;
+}
+
+#btn:hover #circle {
+    height: 50px;
+    width: 190px;
+    left: 5px;
+    border-radius: 0;
+    border-bottom: 2px solid #eee;
+}
+
+
+
