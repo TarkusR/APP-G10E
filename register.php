@@ -152,7 +152,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Close Connexion
     mysqli_close($link);
-    echo $username_err.$email_err .$tel_err. $nom_err. $prenom_err. $confirm_password_err;
+
 }
 ?>
 
@@ -170,37 +170,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <h2>Inscription</h2>
     <p>Veuillez saisir les informations demandées</p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        </div>
-        <div>
+        <div >
             <label> Nom de compte : </label> <br>
-
             <input class="InputRegister"  type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-            <span ><?php echo $username_err; ?></span>
+            <p ><?php echo $username_err; ?></p>
         </div>
         <div >
             <label>E-mail :</label> <br>
             <input class="InputRegister" type="text" name="email" <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
-            <span ><?php echo $email_err; ?></span>
+            <p ><?php echo $email_err; ?></p>
         </div>
         <div >
             <label>Numéro de téléphone :</label> <br>
             <input class="InputRegister" type="text" name="tel" <?php echo (!empty($tel_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $tel; ?>">
-            <span ><?php echo $tel_err; ?></span>
+            <p><?php echo $tel_err; ?></p>
         </div>
         <div >
             <label>Nom :</label> <br>
             <input class="InputRegister" type="text" name="nom" <?php echo (!empty($nom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nom; ?>">
-            <span ><?php echo $nom_err; ?></span>
+            <p><?php echo $nom_err; ?></p>
         </div>
         <div>
             <label>Prénom :</label> <br>
             <input class="InputRegister" type="text" name="prenom" <?php echo (!empty($prenom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prenom; ?>">
-            <span ><?php echo $prenom_err; ?></span>
+            <p ><?php echo $prenom_err; ?></p>
         </div>
         <div >
             <label>Date de naissance :</label> <br>
             <input class="InputRegister" type="date" name="dateNai" <?php echo (!empty($dateNai_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $dateNai; ?>">
-            <span ><?php echo $dateNai_err; ?></span>
+            <p><?php echo $dateNai_err; ?></p>
         </div>
         <div>
             <label>Sex :</label> <br>
@@ -217,12 +215,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div >
             <label>Mots de passe :</label> <br>
             <input class="InputRegister" type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-            <span ><?php echo $password_err; ?></span>
+            <p><?php echo $password_err; ?></p>
         </div>
         <div >
             <label>Confirmez le mots de passe :</label> <br>
             <input class="InputRegister" type="password" name="confirm_password" <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
-            <span ><?php echo $confirm_password_err; ?></span>
+            <p><?php echo $confirm_password_err; ?></p>
         </div>
         <div class="centreRegister">
             <input class="boutonRegister" type="submit" value="Confirmer">

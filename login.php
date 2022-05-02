@@ -77,7 +77,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["sex"]=$sex;
 
                             // Redirige vers la page d'acceuil
-                            header("location: index.php");
+                            header("location: moncompte.php");
                         } else{
                             // si le mots de passe est invalid on display une erreur
                             $login_err = "Mots de passe ou nom d'utilisateur incorrect.";
@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     
-<div class="registerContainer">
+<div class="login-container">
 
     <div class = "centreRegister">
         <img width="150 px" height="150 px"  src="logomeasure.png">

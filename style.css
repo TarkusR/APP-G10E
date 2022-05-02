@@ -59,7 +59,7 @@ li{
     font-size: 25px;
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, p{
     font-family: Arial;
     font-weight: bolder;
     color: white;
@@ -128,9 +128,8 @@ h1, h2, h3, h4{
 
 
 .login{
-    background-image:
-            url("src/zenGarden.jpg");
-    background-position: center;
+    background : linear-gradient(to left, dodgerblue, hsl(260, 60%, 56%));
+
     backdrop-filter: blur(5px);
     user-select: none; /*Permet de ne pas sélectionner le texte*/
     display: flex;
@@ -181,17 +180,38 @@ h1, h2, h3, h4{
     text-align: center;
 }
 
+.login-container{
+    padding: 60px;
+    margin: 50px;
+    display: flex;
+    max-width: 70vw;
+    max-height: 70vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    opacity : 0.8;
+    border-radius: 30px;
+    font-size: 15px ;
+    font-family: Arial;
+}
+
 .registerContainer{
     padding: 60px;
     margin: 50px;
     display: flex;
+    max-width: 90vw;
+    max-height: 90vh;
     justify-content: center;
     flex-direction: column;
-
-    background-color: #E8E8E8;
+    align-items: center;
+    background-color: white;
+    opacity : 0.8;
     border-radius: 30px;
-    font-size: 20px ;
+    font-size: 15px ;
+    font-family: Arial;
 }
+
 
 .registerOrganisation{
     align-content: center;
@@ -208,6 +228,7 @@ h1, h2, h3, h4{
     padding-left: 4%;
 }
 
+
 .InputRegister:hover{
     transition-duration: 0.3s;
     background-color: darkgray;
@@ -221,6 +242,7 @@ h1, h2, h3, h4{
     margin: 10px;
     border-radius: 25px;
     background-color: white;
+
     padding: 10px;
 }
 
@@ -231,7 +253,7 @@ h1, h2, h3, h4{
 
 .seconnecterRegister{
     transition-duration: 0.3s;
-    color: forestgreen;
+    color: blueviolet;
     text-decoration: none;
 }
 
@@ -330,16 +352,12 @@ a{
     background: linear-gradient(#1E90FFFF,#691FFFFF);
     text-align: center;
     position: relative;
-    bottom:0;
-    margin : 0;
+    margin-bottom: 0;
     width: 100%;
     padding : 0;
-    bottom: 0%;
 }
 
-footer{
-    padding: -5px;
-}
+
 
 .footerOrga{
   display: flex;
@@ -479,7 +497,7 @@ section .wave.wave1{
 }
 
 section .wave.wave2{
-    animation: animate2 60s linear infinite;
+    animation: animate2 60s infinite linear;
     opacity : 0.35;
     animation-delay: -5s;
     bottom : 0px;
@@ -515,7 +533,7 @@ section .wave.wave3{
 }
 
 #btn {
-    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 56%));;
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 56%));
     height: 50px;
     width : 200px;
     min-width: 150px;
@@ -568,5 +586,105 @@ section .wave.wave3{
     border-bottom: 2px solid #eee;
 }
 
+.descriptor{
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    position: relative;
+    margin-left: 10vh;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+}
+
+.descriptor-image-container{
 
 
+}
+
+.descriptor-image{
+    margin-left: 20vh;
+    height:384px;
+    border-radius: 50%;
+    animation: float 7s infinite ease-in-out;
+
+}
+
+@keyframes float {
+    0%{
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.descriptor-text-container{
+    display: flex;
+    flex-direction: column;
+    width: 80vh;
+}
+
+.descriptor h1,h2,p{
+    color : black;
+    font-weight: normal;
+}
+
+.descriptor-text{
+    width: 100%;
+    height: 100%;
+}
+
+.consult-data-descriptor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.consult-data-button #btn{
+    height:100px;
+    width:250px;
+    text-align: center;
+}
+
+.consult-data-button #btn:hover #circle{
+    height: 100px;
+    width: 240px;
+}
+
+.consult-data-text h1, h2 , p{
+    color: black;
+    font-weight: normal;
+}
+.consult-data-button{
+    margin-bottom: 5vh;
+}
+
+/* Mon Compte */
+
+.account-descriptor-container{
+    margin-top: 15vh;
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.account-descriptor-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.account-descriptor-title{
+    display: flex;
+    flex-direction: row;
+    width: 50vh;
+
+}
+
+.account-descriptor-usable{
+    margin-left: 15vh;
+    text-align: right;
+}
