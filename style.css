@@ -836,3 +836,63 @@ section .wave.wave3{
     margin-top: 1vh;
     width: 50%;
 }
+
+/* Page Ludique */
+.ludique-container h1,h2,h3,p{
+    color: black;
+}
+
+
+.ludique-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15vh;
+}
+
+.ludique-content-container-right{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15vw;
+    margin-bottom: 5vw;
+}
+
+.ludique-content-container-left{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 15vw;
+    margin-bottom: 5vw;
+}
+
+.ludique-content-text-container{
+    max-width: 40vw;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.ludique-content-media-container{
+    margin-left: 10vw;
+}
+
+.ludique-content-text-container-left{
+    max-width: 40vw;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.ludique-content-media-container-left{
+    margin-right: 10vw;
+}
+.ludique-title-container{
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+}
+
+div.ludique-title-container {
+    width:40%;
+    overflow:hidden;
+    margin-left: 15vw;
+}
+div.ludique-title-container h1, h2, h3 {
+    animation: 1s slide-right, fadeIn 1s;
+
+}
