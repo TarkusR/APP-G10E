@@ -35,7 +35,7 @@ if(isset($_GET['logout']))
     </div>
     <div class="ludique-content-container-left">
         <div class="ludique-content-text-container-left">
-            <p>Certains aliments ont des effets particulièrement intéressant pour vous aider à gérer votre stress, l'avocat, le chocolat, les poissons gras. Vous pouvez découvrir la liste complètes ainsi que leur effets en cliquant sur le logo.  </p>
+            <p>Certains aliments ont des effets particulièrement intéressants pour vous aider à gérer votre stress, l'avocat, le chocolat, les poissons gras. Vous pouvez découvrir la liste complète ainsi que leurs effets en cliquant sur le logo.  </p>
         </div>
         <div class="ludique-content-media-container-left">
             <a href="https://www.cuisineaz.com/diaporamas/aliments-anti-stress-1435/interne/1.aspx">
@@ -49,7 +49,7 @@ if(isset($_GET['logout']))
     </div>
     <div class="ludique-content-container-right">
         <div class="ludique-content-text-container">
-            <p>L'origine de la méditation, en quoi ça consiste, les bienfaits ou encore comment pratiquer la méditation, vous pouvez vous renseignez en cliquant sur le logo</p>
+            <p>L'origine de la méditation, en quoi ça consiste, les bienfaits ou encore comment pratiquer la méditation, vous pouvez vous renseigner en cliquant sur le logo</p>
         </div>
         <div class="ludique-content-media-container">
             <a href="https://www.santemagazine.fr/medecines-alternatives/autres-pratiques/meditation/tout-savoir-sur-les-bienfaits-de-la-meditation-177043#:~:text=La%20méditation%20est%20une%20pratique%20visant%20à%20accorder%20une%20pause,le%20stress%20et%20l%27anxiété">
@@ -60,11 +60,11 @@ if(isset($_GET['logout']))
     <!-- à là --!>
     <!-- pour alex, tu peux copier pour les container de gauche de ici --!>
     <div class="ludique-title-container-left">
-        <h3>Gestes simple pour se détendre</h3>
+        <h3>Gestes simples pour se détendre</h3>
     </div>
     <div class="ludique-content-container-left">
         <div class="ludique-content-text-container-left">
-            <p>Si vous avez une, deux voir une trentaine de minutes devant vois, cette article vous propose différents exercice simple et efficace afin de gérer votre stress, n'hésitez pas à cliquer sur le logo pour consulter l'article.</p>
+            <p>Si vous avez une, deux voire une trentaine de minutes devant vous, cette article vous propose différents exercices simples et efficaces afin de gérer votre stress, n'hésitez pas à cliquer sur le logo pour consulter l'article.</p>
         </div>
         <div class="ludique-content-media-container-left">
             <a href="https://www.marieclaire.fr/,comment-se-detendre-en-1-2-5-10-30-minutes,837024.asp#:~:text=Frictionnez%2C%20martelez%2C%20pressez%20et%20massez,le%20nez%2C%20bien%20sûr" >
