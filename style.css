@@ -459,6 +459,10 @@ h1, h2, h3, h4, p{
     margin-top: 35vh;
 }
 
+.content-text h1,h2,h3,p{
+    color:white;
+}
+
 div.content-text {
     width:40%;
     overflow:hidden;
@@ -895,4 +899,16 @@ div.ludique-title-container {
 div.ludique-title-container h1, h2, h3 {
     animation: 1s slide-right, fadeIn 1s;
 
+}
+
+.ludique-title-container h3{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ludique-title-container-left{
+    text-align: right;
+    margin-right: 15vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

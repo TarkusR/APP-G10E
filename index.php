@@ -20,8 +20,8 @@ if(isset($_GET['logout']))
         <div class = "wave wave3"></div>
         <div class = "content-outside">
             <div class = "content-text">
-                <h1>L'outil de mesure du bien être intérieur</h1>
-                <h3>Votre espace personnel </h3>
+                <h1 >L'outil de mesure du bien être intérieur</h1>
+                <h3 style="color : white;">Votre espace personnel </h3>
                 <?php
 
                 if(isset($_SESSION["loggedin"])){
