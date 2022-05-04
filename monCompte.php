@@ -44,10 +44,23 @@ include_once "header.php"
         <script type="text/javascript" src="js/app.js"></script>
     </div>
 </div>
-    <div class="admin-search-bar-container">
-        <h1>Rechercher un utilisateur</h1>
+    <?php
+    if($_SESSION['admin']==1){
+        echo '
+        <div class="admin-search-bar-container">
+            <div><h1>Rechercher un utilisateur</h1></div>
+                <div class="form-group field">
+                    <script type="text/javascript" src="js/script.js"></script>
+                    <input class="search-bar" autocomplete="off" type="text" id="search" placeholder="Recherche" />
+                    <label class="form-label" for="search">Recherche</label>
+                    <div class="search-bar-result" id="display"></div>
+                </div>
+    </div>';
+    } else{
 
-    </div>
+    }
+    ?>
+
 </div>
 </body>
 <?php

@@ -118,7 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class = "centreRegister">
         <img width="150 px" height="150 px"  src="logomeasure.png">
     <h2>Connexion</h2>
-    <p>Entrez données.</p>
+    <p>Entrez vos données.</p>
 
     <?php
     if(!empty($login_err)){
@@ -131,12 +131,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div>
                 <label>Nom de compte</label> <br>
                 <input class="InputRegister" type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                <span><?php echo $username_err; ?></span>
+                <p><?php echo $username_err; ?></p>
             </div>
             <div >
                 <label>Mots de passe</label> <br>
                 <input class="InputRegister" type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                <span ><?php echo $password_err; ?></span>
+                <p ><?php echo $password_err; ?></p>
             </div>
             <div  class="centreRegister">
                 <input class="boutonRegister" type="submit"  value="Login">
