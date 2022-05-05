@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FAQ</title>
+    <title>À propos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
