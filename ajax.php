@@ -15,7 +15,6 @@ if (MySQLi_connect_errno()) {
 }
 
 
-
 //Getting value of "search" variable from "script.js".
 if (isset($_POST['search'])) {
 //Search box value assigning to $Name variable.

@@ -873,6 +873,16 @@ section .wave.wave3{
     line-height: 25px;
 }
 
+.ludique-content-text-container p,li{
+    font-family: Arial;
+}
+
+.ludique-content-text-container-left p,li{
+    font-family: Arial;
+}
+
+
+
 .ludique-content-media-container{
     margin-left: 10vw;
 }

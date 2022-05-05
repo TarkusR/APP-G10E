@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $admin, $mail, $phoneNumber, $firstName,$name, $dateNaissance, $sex);
 
                     if(mysqli_stmt_fetch($stmt)){
-                        echo $password;
+
                         if(password_verify($password, $hashed_password)){
 
                             // Si le mots de passe est correct on lance une session

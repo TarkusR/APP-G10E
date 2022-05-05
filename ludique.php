@@ -122,9 +122,7 @@ if(isset($_GET['logout']))
             <p>Voici une vidéo vous apprenant les bases de la méditation.</p>
         </div>
         <div class="ludique-content-media-container">
-            <video controls >
-                <source src="https://www.youtube.com/watch?v=QjoZfET5kJ8">
-            </video>
+            <iframe style="margin-right: 10vh" width="560" height="315" src="https://www.youtube.com/embed/QjoZfET5kJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </div>
