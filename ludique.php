@@ -73,6 +73,44 @@ if(isset($_GET['logout']))
         </div>
     </div>
     <!-- à là --!>
+    <div class="ludique-title-container">
+        <h1>Le sommeil, au coeur des solutions anti-stress</h1>
+    </div>
+    <div class="ludique-title-container">
+        <h3>Le cercle vicieux Stress - Anxiété - Insomnie</h3>
+    </div>
+    <div class="ludique-content-container-right">
+        <div class="ludique-content-text-container">
+            <p>"Le sommeil est une composante majeure, unique et indispensable
+                de notre santé et de notre bien-être.
+                Sommeil nocturne et éveil diurne
+                sont étroitement liés. En effet,
+                un sommeil de mauvaise qualité
+                va entraîner des difficultés de
+                fonctionnement et d’activité dans
+                la journée et un stress diurne mal
+                supporté va perturber la qualité du
+                sommeil.
+                Ainsi, nous pouvons décrire un
+                véritable cercle vicieux stress –
+                anxiété – insomnie." (Pr Joël Paquereau)
+            Pour saisir le lien entre stress et sommeil cliquez sur le logo.</p>
+        </div>
+        <div class="ludique-content-media-container">
+            <a href="https://institut-sommeil-vigilance.org/wp-content/uploads/2020/02/INSV-Carnet-3-Sommeil-Stress-2020.pdf">
+                <img src="https://d3qzs0h3adk1cd.cloudfront.net/wp-content/uploads/2018/10/5-Huiles-Essentielles-contre-les-insomnies-photo02.jpg">
+            </a>
+        </div>
+    </div>
+    <div class="ludique-title-container-left">
+        <h3>Améliorer son sommeil</h3>
+    </div>
+    <div class="ludique-content-container-left">
+        <div class="ludique-content-text-container-left">
+            <p></p>
+        </div>
+
+    </div>
 </div>
 <?php include_once "footer.php" ?>
 </body>
