@@ -107,9 +107,25 @@ if(isset($_GET['logout']))
     </div>
     <div class="ludique-content-container-left">
         <div class="ludique-content-text-container-left">
-            <p></p>
+            <p>Voici quelques bonnes pratiques à adopter pour mieux dormir</p>
+            <ol>
+                <li>Maintenez des horaires de sommeil réguliers</li>
+                <li>Évitez les boissons stimulantes comme le café et le thé l'après midi</li>
+                <p>Ces boissons contiennent des substances excitantes empêchant l'apaisement du système nerveux.</p>
+                <li>Arrêter les écrans au moins une heure avant de se coucher</li>
+                <p>La lumière bleue diffusée par ces écrans est très excitante comme la lumière du jour. Il faut donc éviter d'y être exposé le soir</p>
+                <li>Privilégiez la qualité du sommeil que la quantité</li>
+                <p>Il est important de ne pas faire la confusion, on peut dormir longtemps sans toutefois être reposé. Le manque de sommeil ne va pas créer une fatigue irrémédiable, il ne faut donc jamais forcer votre sommeil ni faire de trop longues siestes pouvant perturber l'équilibre du sommeil. </p>
+                <li>Respectez le rituel de coucher</li>
+                <p>Votre soirée doit être dédiée à la relaxation, pratiquez des activités reposantes comme la lecture ou la méditation</p>
+            </ol>
+            <p>Voici une vidéo vous apprenant les bases de la méditation.</p>
         </div>
-
+        <div class="ludique-content-media-container">
+            <video controls >
+                <source src="https://www.youtube.com/watch?v=QjoZfET5kJ8">
+            </video>
+        </div>
     </div>
 </div>
 <?php include_once "footer.php" ?>
