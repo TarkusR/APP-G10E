@@ -48,22 +48,6 @@ if(isset($_GET['logout']))
     </div>
 </div>
 
-<!-- Ajout Baptiste -->
-
-<div class="consult-data-descriptor">
-    <div class="consult-data-text">
-        <h1>Inspiré du sport de haut niveau</h1>
-    </div>
-    <div class="index-baptiste-image">
-        <img src="src/coeur.png" alt="">
-    </div>
-    <div class="index-baptiste-image">
-        <img src="src/air.png" alt="">
-    </div>
-
-</div>
-
-<!-- Fin ajout Baptiste -->
 
 <div class="consult-data-descriptor">
     <div class="consult-data-text">
