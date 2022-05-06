@@ -10,6 +10,22 @@ session_start();
 </head>
 <body >
 <?php  include "header.php"; ?>
+
+<div class="a-propos-text-container">
+    <div class="ludique-title-container">
+        <h1>Quelles sont les causes du stress</h1>
+    </div>
+<div class="ludique-content-container-right">
+    <div class="ludique-content-text-container">
+        <p>Repérer les symptômes du stress isolant les causes, cette article vous aidera à mieux comprendre votre stress et à vous poser les bonnes questions pour y trouver vos solutions.
+            <br> Cliquez sur l'image pour accéder à l'article</p>
+    </div>
+    <div class="ludique-content-media-container">
+        <a href="https://www.theraserena.com/stress/dossiers/decouvrez-les-5-causes-majeures-du-stress"><img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFe3-i_jLQZuw/company-logo_200_200/0/1594378233349?e=2147483647&v=beta&t=FeqiewjeK0gVcKLS7u26MC0s0K8FfdH6koimqP3oE9Q">
+        </a>
+    </div>
+</div>
+</div>
 <div class='faq'>
     <div class="faq-title"><h1>Questions les plus frequentes</h1></div>
     <input id='faq-a' type='checkbox'>
