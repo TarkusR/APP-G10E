@@ -449,6 +449,14 @@ h1, h2, h3, h4, p{
 ::-webkit-scrollbar {
     display: none;
 }
+
+.a-propos-text-container{
+    margin-top: 20vh;
+}
+
+.a-propos-text-container h1,h2{
+    color: black;
+}
 /*Fin section dédiée aux FAQ*/
 
 /* Page d'accueil */
