@@ -13,15 +13,23 @@ session_start();
 
 <div class="a-propos-text-container">
     <div class="ludique-title-container">
-        <h1>Quelles sont les causes du stress</h1>
+        <h1>Solution Infinite Measure</h1>
     </div>
 <div class="ludique-content-container-right">
     <div class="ludique-content-text-container">
-        <p>Repérer les symptômes du stress isolant les causes, cette article vous aidera à mieux comprendre votre stress et à vous poser les bonnes questions pour y trouver vos solutions.
-            <br> Cliquez sur l'image pour accéder à l'article</p>
+        <p>Le produit d’Infinite Measure permet de mesurer la qualité de votre environnement de travail grâce à différents capteurs placés sur le lieu de travail. Ces capteurs prélèvent différentes données :</p>
+        <ul>
+            <li>Le taux de CO2 présent dans l’air</li>
+            <li>La température ambiante </li>
+            <li>Le taux d’humidité présent</li>
+            <li>La nuisance sonore</li>
+            <li>La fréquence cardiaque</li>
+
+        </ul>
+        <p>Infinite Measure a développé pour vos espaces de travail collaboratif un réseau de capteurs. Un boîtier sera installé dans votre espace de travail pour étudier la qualité environnementale de l’espace de travail. Des capteurs cardiaques seront distribués à vos employés s’il le souhaite. La solution d’Infinite Measure permettra à vos employés de comprendre l’enjeu du stress au travail et d’apprendre les bases de la relaxation. Pour votre entreprise l’intérêt est d’améliorer la productivité de vos employés en créant un environnement de travail sain.</p>
     </div>
     <div class="ludique-content-media-container">
-        <a href="https://www.theraserena.com/stress/dossiers/decouvrez-les-5-causes-majeures-du-stress"><img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFe3-i_jLQZuw/company-logo_200_200/0/1594378233349?e=2147483647&v=beta&t=FeqiewjeK0gVcKLS7u26MC0s0K8FfdH6koimqP3oE9Q">
+        <a href="https://infinitemeasures.fr/vues/fr/index.php"><img style="transform: scale(0.8); height: 50vh; width: 30vw" src="https://i.imgur.com/6CFLqM7.png">
         </a>
     </div>
 </div>
