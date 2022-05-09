@@ -29,7 +29,7 @@ session_start();
         <p>Infinite Measure a développé pour vos espaces de travail collaboratif un réseau de capteurs. Un boîtier sera installé dans votre espace de travail pour étudier la qualité environnementale de l’espace de travail. Des capteurs cardiaques seront distribués à vos employés s’il le souhaite. La solution d’Infinite Measure permettra à vos employés de comprendre l’enjeu du stress au travail et d’apprendre les bases de la relaxation. Pour votre entreprise l’intérêt est d’améliorer la productivité de vos employés en créant un environnement de travail sain.</p>
     </div>
     <div class="ludique-content-media-container">
-        <a href="https://infinitemeasures.fr/vues/fr/index.php"><img style="transform: scale(0.8); height: 50vh; width: 30vw" src="https://i.imgur.com/6CFLqM7.png">
+        <a href="https://infinitemeasures.fr/vues/fr/index.php"><img style="transform: scale(0.8); height: 50vh; width: 30vw" src="src/6CFLqM7.png">
         </a>
     </div>
 </div>
