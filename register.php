@@ -166,12 +166,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body class="login">
 <div class="registerContainer">
-    <div class="centreRegister">
-    <h2>Inscription</h2>
+
+    <h2 style="animation: none">Inscription</h2>
     <p>Veuillez saisir les informations demandées</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <div action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <div class="register-Flex-Container">
+        <div class="centreRegister">
         <div >
-            <label> Nom de compte : </label> <br>
+            <label>Nom de compte : </label>
             <input class="InputRegister"  type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
             <p ><?php echo $username_err; ?></p>
         </div>
@@ -195,6 +197,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <input class="InputRegister" type="text" name="prenom" <?php echo (!empty($prenom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $prenom; ?>">
             <p ><?php echo $prenom_err; ?></p>
         </div>
+
+        </div>
+        <div class="centreRegister">
         <div >
             <label>Date de naissance :</label> <br>
             <input class="InputRegister" type="date" name="dateNai" <?php echo (!empty($dateNai_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $dateNai; ?>">
@@ -211,6 +216,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <input type="radio" name="sex" id="unexpresed" value="unexpresed"/>
             <label for="unexpresed"> Ne préfère pas dire</label>
         </div>
+
     <br>
         <div >
             <label>Mots de passe :</label> <br>
@@ -222,12 +228,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <input class="InputRegister" type="password" name="confirm_password" <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
             <p><?php echo $confirm_password_err; ?></p>
         </div>
-        <div class="centreRegister">
+        </div>
+        </div>
+        <div class="centreRegister-button">
             <input class="boutonRegister" type="submit" value="Confirmer">
             <input class="boutonRegister" type="reset"  value="Reinitialiser">
+            <p>Possédez-vous déjà un compte ? <a href="login.php" class="seconnecterRegister">Connectez-vous ici</a></p>
         </div>
-        <p>Possédez-vous déjà un compte ? <a href="login.php" class="seconnecterRegister">Connectez-vous ici</a></p>
     </form>
 </div>
+
 </body>
 </html>
