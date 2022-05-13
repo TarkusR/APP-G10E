@@ -69,6 +69,15 @@ session_start();
         <div class='faq-arrow'></div>
         <p class="faq-text">Réponse à venir sous peu.</p></label></label>
 </div>
+<div class="consult-data-descriptor">
+    <div class="consult-data-text">
+        <h1>Vous avez une question ? Contactez Nous.</h1>
+    </div>
+    <div class="consult-data-button">
+        <a href="nousContactez.php"> <div id="btn"><span class="noselect">Contactez-nous</span><div id="circle"></div></div></a>
+    </div>
+
+</div>
 <?php  include "footer.php"; ?>
 
 </body>

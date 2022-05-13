@@ -31,9 +31,7 @@ if(isset($_GET['logout']))
                    echo '<a href="login.php"> <div id="btn"><span class="noselect">Se connecter</span><div id="circle"></div></div></a>';
                 }
                 ?>
-
             </div>
-
         </div>
     </section>
 </div>
@@ -71,7 +69,15 @@ if(isset($_GET['logout']))
         <p> Cliquez juste ici </p>
     </div>
     <div class="consult-data-button">
-        <a href="login.php"> <div id="btn"><span class="noselect">Consulter vos données</span><div id="circle"></div></div></a>
+
+        <?php
+
+        if(isset($_SESSION["loggedin"])){
+            echo '<a href="monCompte.php"> <div id="btn"><span class="noselect">Consulter vos données</span><div id="circle"></div></div></a>';
+        } else{
+            echo '<a href="login.php"> <div id="btn"><span class="noselect">Consulter vos données</span><div id="circle"></div></div></a>';
+        }
+        ?>
     </div>
 
 </div>

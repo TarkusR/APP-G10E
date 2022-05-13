@@ -382,6 +382,7 @@ h1, h2, h3, h4, p{
 
 .faq {
     margin-top: 20vh;
+    margin-bottom: 10vh;
     width: 1000px;
     margin-left: 22.5vw;
     background: white;
