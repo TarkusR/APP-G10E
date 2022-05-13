@@ -170,7 +170,12 @@ h1, h2, h3, h4, p{
 }
 
 .centreRegister{
-    text-align: center;
+    text-align: left;
+    margin-left: 10vh;
+}
+.register-Flex-Container{
+    display: flex;
+    flex-direction: row;
 }
 
 .login-container{
@@ -190,7 +195,7 @@ h1, h2, h3, h4, p{
 }
 
 .registerContainer{
-    padding: 60px;
+    padding: 20px;
     margin: 50px;
     display: flex;
     max-width: 90vw;
@@ -205,6 +210,10 @@ h1, h2, h3, h4, p{
     font-family: Arial;
 }
 
+.centreRegister-button{
+    text-align: center;
+}
+
 
 .registerOrganisation{
     align-content: center;
@@ -212,9 +221,10 @@ h1, h2, h3, h4, p{
 
 .InputRegister{
     transition-duration: 0.3s;
+    margin-top: 5px;
     margin-bottom: 10px;
     border-radius: 15px;
-    background-color: white;
+    background-color: lightgrey;
     border: none;
     width: 75%;
     height: 30px;
@@ -238,6 +248,8 @@ h1, h2, h3, h4, p{
 
     padding: 10px;
 }
+
+
 
 .boutonRegister:hover{
     transition-duration: 0.3s;
