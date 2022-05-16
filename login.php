@@ -116,10 +116,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <div class="login-container">
 
     <div class = "centreRegister">
+        <div class="centreRegister-button">
         <img width="150 px" height="150 px"  src="logomeasure.png">
-    <h2>Connexion</h2>
-    <p>Entrez vos données.</p>
-
+        <h2>Connexion</h2>
+        <p>Entrez vos données.</p>
+        </div>
     <?php
     if(!empty($login_err)){
         echo '<div>' . $login_err . '</div>';
