@@ -1,4 +1,4 @@
-#Repository GithHub du groupe APP G10E pour le projet d'APP informatique 2021-2022
+# Repository GithHub du groupe APP G10E pour le projet d'APP informatique 2021-2022
 
 Le projet consiste en la création d'un site web permettant le monitoring de données environnementale.
 
