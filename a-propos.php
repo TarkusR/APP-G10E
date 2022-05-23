@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <title>À propos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body >
 <?php  include "header.php"; ?>

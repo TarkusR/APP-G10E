@@ -6,7 +6,7 @@ session_start();
 
 <head>
     <title>Mon Compte</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 
 </head>
 

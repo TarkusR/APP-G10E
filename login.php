@@ -107,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="login">
 
@@ -146,8 +146,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a></p>
             </div>
         </div>
-
-
     </form>
 </body>
 </html>

@@ -10,7 +10,7 @@ if(isset($_GET['logout']))
 <html lang ="en">
 <head>
     <title>Bienvenue</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="accueil">
 <?php  include('header.php'); ?>
