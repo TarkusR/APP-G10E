@@ -6,10 +6,10 @@ require_once "config.php";
 // Definis les variables pour qu'elles soient vide
 $username = $password = $confirm_password = $email= $tel = $nom = $prenom = $dateNai= $sex ="";
 $username_err = $password_err = $confirm_password_err = $email_err = $tel_err = $nom_err = $prenom_err= $dateNai_err = $sex_err = "";
-
+echo $_SERVER["REQUEST_METHOD"];
 // On check la method de request pour savoir si le form a été submit
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    echo'test2';
+
     // Valide le nom de compte
     if(empty(trim($_POST["username"]))){
         $username_err = "Entrer un nom d'utilisateurs.";
@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $maj = preg_match('@[A-Z]@', $_POST["password"]);
     $min = preg_match('@[a-z]@', $_POST["password"]);
     $number = preg_match('@[0-9]@', $_POST["password"]);
-    echo 'test1';
+
     if(empty(trim($_POST["password"]))){
         $password_err = "entrer un mot de passe.";
     } elseif(strlen(trim($_POST["password"])) < 6){
@@ -177,7 +177,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <h2 style="animation: none">Inscription</h2>
     <p>Veuillez saisir les informations demandées</p>
-    <div action="register.php" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="register-Flex-Container">
         <div class="centreRegister">
         <div >
@@ -244,7 +244,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Possédez-vous déjà un compte ? <a href="login.php" class="seconnecterRegister">Connectez-vous ici</a></p>
         </div>
     </form>
-</div>
+</form>
 
 </body>
 </html>
