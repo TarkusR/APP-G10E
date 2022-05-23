@@ -3,11 +3,18 @@ session_start();
 
 ?>
 <?php
-$question = 'bonjour';
-$reponse = 'oui';
+try {
+    $db = new PDO('mysql:host=localhost:3306;dbname=ce1;charset=utf8', 'root', '');
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
 
-$question2='';
-$reponse2 = '';
+
+/*$question = $db->prepare('SELECT text FROM question WHERE IDQuestion = 1');
+
+$question->execute();
+$result2 = $question->fetch();*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,10 +80,10 @@ $reponse2 = '';
     <input id='faq-f' type='checkbox'>
     <label for='faq-f'>
         <?php
-        echo "<p class='faq-heading'>$question</p>";?>
+        echo "<p class='faq-heading'></p>";?>
         <div class='faq-arrow'></div>
         <?php
-        echo "<p class='faq-text'>$reponse</p></label></label>";?>
+        echo "<p class='faq-text'></p></label></label>";?>
 
 </div>
 <div class="consult-data-descriptor">
