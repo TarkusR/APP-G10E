@@ -1,10 +1,10 @@
 <?php
 //Database connection.
 $con = MySQLi_connect(
-    "localhost", //Server host name.
-    "root", //Database username.
-    "", //Database password.
-    "bdd" //Database name
+    "herogu.garageisep.com", //Server host name.
+    "mX9Rm4LPla_infinite_g'", //Database username.
+    "nWWkuPe1p5xajcco", //Database password.
+    "GpyQOrqTrS_infinite_g" //Database name
 );
 //Check connection
 if (MySQLi_connect_errno()) {

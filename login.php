@@ -77,7 +77,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["sex"]=$sex;
 
                             // Redirige vers la page d'acceuil
-                            header("location: moncompte.php");
+                            header("location: monCompte.php");
                         } else{
                             // si le mots de passe est invalid on display une erreur
                             $login_err = "Mots de passe ou nom d'utilisateur incorrect.";
