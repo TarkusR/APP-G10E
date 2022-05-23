@@ -101,6 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $maj = preg_match('@[A-Z]@', $_POST["password"]);
     $min = preg_match('@[a-z]@', $_POST["password"]);
     $number = preg_match('@[0-9]@', $_POST["password"]);
+    echo 'test1';
     if(empty(trim($_POST["password"]))){
         $password_err = "entrer un mot de passe.";
     } elseif(strlen(trim($_POST["password"])) < 6){
