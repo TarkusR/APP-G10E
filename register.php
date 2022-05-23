@@ -177,7 +177,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <h2 style="animation: none">Inscription</h2>
     <p>Veuillez saisir les informations demandées</p>
-    <div action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <div action="register.php" method="post">
         <div class="register-Flex-Container">
         <div class="centreRegister">
         <div >
