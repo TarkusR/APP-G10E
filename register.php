@@ -9,7 +9,7 @@ $username_err = $password_err = $confirm_password_err = $email_err = $tel_err = 
 
 // On check la method de request pour savoir si le form a été submit
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-
+    echo'test2';
     // Valide le nom de compte
     if(empty(trim($_POST["username"]))){
         $username_err = "Entrer un nom d'utilisateurs.";
