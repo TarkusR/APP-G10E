@@ -1,11 +1,11 @@
 <?php
 //Database connection.
-$con = MySQLi_connect(
-    "herogu.garageisep.com", //Server host name.
-    "mX9Rm4LPla_infinite_g'", //Database username.
-    "nWWkuPe1p5xajcco", //Database password.
-    "GpyQOrqTrS_infinite_g" //Database name
-);
+define('DB_SERVER', 'herogu.garageisep.com');
+define('DB_USERNAME', 'mX9Rm4LPla_infinite_g');
+define('DB_PASSWORD', 'nWWkuPe1p5xajcco');
+define('DB_NAME', 'GpyQOrqTrS_infinite_g');
+
+$con = MySQLi_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 //Check connection
 if (MySQLi_connect_errno()) {
     echo "Failed to connect to MySQL: " . MySQLi_connect_error();
