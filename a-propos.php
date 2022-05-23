@@ -2,6 +2,13 @@
 session_start();
 
 ?>
+<?php
+$question = 'bonjour';
+$reponse = 'oui';
+
+$question2='';
+$reponse2 = '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,9 +72,12 @@ session_start();
     <input id='settings' type='checkbox'>
     <input id='faq-f' type='checkbox'>
     <label for='faq-f'>
-        <p class="faq-heading">De quelle manière la solution d'Infinite Measure améliore la qualité de vie de mon espace de travail?</p>
+        <?php
+        echo "<p class='faq-heading'>$question</p>";?>
         <div class='faq-arrow'></div>
-        <p class="faq-text">Réponse à venir sous peu.</p></label></label>
+        <?php
+        echo "<p class='faq-text'>$reponse</p></label></label>";?>
+
 </div>
 <div class="consult-data-descriptor">
     <div class="consult-data-text">
