@@ -9,11 +9,19 @@
         <?php
             if(isset($_SESSION["loggedin"])){
                 echo '<div> <a href="monCompte.php" class="lienmenu monCompte">Mon compte </a></div>';
-                echo '<div><a href="logout.php" class=" lienmenu">  <button class="connexion" >Déconnexion</button> </a></div> ';
+                echo '<div><a class=" lienmenu">  <button onclick="disconnect()" class="connexion" >Déconnexion</button> </a></div> ';
             } else{
                 echo ' <div><a  href="login.php" class=" lienmenu">  <button class="connexion">Connexion</button> </a></div> ';
             }
         ?>
 
     </div>
+    <script>
+        function disconnect() {
+            var txt;
+            if (confirm("Êtes vous sûr de vouloir vous déconnecter?")) {
+                location.replace("logout.php")
+            }
+        }
+    </script>
 </header>

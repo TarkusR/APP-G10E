@@ -36,12 +36,14 @@ include_once "header.php"
     <div class="account-data-container">
         <div class="chart-container">
             <canvas id="mycanvas"></canvas>
-
         </div>
+
+
         <!-- javascript -->
         <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/chart.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/app2.js"></script>
     </div>
 </div>
     <?php

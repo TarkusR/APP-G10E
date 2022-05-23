@@ -2,6 +2,13 @@
 session_start();
 
 ?>
+<?php
+$question = 'bonjour';
+$reponse = 'oui';
+
+$question2='';
+$reponse2 = '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +36,7 @@ session_start();
         <p>Infinite Measure a développé pour vos espaces de travail collaboratif un réseau de capteurs. Un boîtier sera installé dans votre espace de travail pour étudier la qualité environnementale de l’espace de travail. Des capteurs cardiaques seront distribués à vos employés s’il le souhaite. La solution d’Infinite Measure permettra à vos employés de comprendre l’enjeu du stress au travail et d’apprendre les bases de la relaxation. Pour votre entreprise l’intérêt est d’améliorer la productivité de vos employés en créant un environnement de travail sain.</p>
     </div>
     <div class="ludique-content-media-container">
-        <a href="https://infinitemeasures.fr/vues/fr/index.php"><img style="transform: scale(0.8); height: 50vh; width: 30vw" src="https://i.imgur.com/6CFLqM7.png">
+        <a href="https://infinitemeasures.fr/vues/fr/index.php"><img style="transform: scale(0.8); height: 50vh; width: 30vw" src="src/6CFLqM7.png">
         </a>
     </div>
 </div>
@@ -65,9 +72,21 @@ session_start();
     <input id='settings' type='checkbox'>
     <input id='faq-f' type='checkbox'>
     <label for='faq-f'>
-        <p class="faq-heading">De quelle manière la solution d'Infinite Measure améliore la qualité de vie de mon espace de travail?</p>
+        <?php
+        echo "<p class='faq-heading'>$question</p>";?>
         <div class='faq-arrow'></div>
-        <p class="faq-text">Réponse à venir sous peu.</p></label></label>
+        <?php
+        echo "<p class='faq-text'>$reponse</p></label></label>";?>
+
+</div>
+<div class="consult-data-descriptor">
+    <div class="consult-data-text">
+        <h1>Vous avez une question ? Contactez Nous.</h1>
+    </div>
+    <div class="consult-data-button">
+        <a href="nousContactez.php"> <div id="btn"><span class="noselect">Contactez-nous</span><div id="circle"></div></div></a>
+    </div>
+
 </div>
 <?php  include "footer.php"; ?>
 
