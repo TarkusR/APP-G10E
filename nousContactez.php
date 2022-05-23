@@ -55,7 +55,6 @@ if(isset($_SESSION["loggedin"])){
             </div>
             <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
                 <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-                    <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Infinite Measure</a></h1>
                 </div>
                 <div class="formbg-outer">
                     <div class="formbg">
@@ -71,7 +70,7 @@ if(isset($_SESSION["loggedin"])){
                                 <div class="field padding-bottom--24">
                                     <input type="email" name="email" placeholder="E-mail">
                                 </div>
-                                <div class="field padding-bottom--24">
+                                <div class="field padding-bottom--24 textarea">
                                     <textarea name="text" cols="55" rows="5" placeholder="Message"></textarea>
                                 </div>
                                 <div class="field padding-bottom--24">
