@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validation du nom
     if(empty(trim($_POST["nom"]))){
         $nom_err = "Entrer un nom valide.";
-    } elseif(!ctype_alnum($_POST["nom"])){
+    } elseif(!preg_match("/[A-Za-z]+/",$_POST["nom"])){
         $nom_err = "Entrer un nom valide.";
     } else{
         $nom = trim($_POST["nom"]);
