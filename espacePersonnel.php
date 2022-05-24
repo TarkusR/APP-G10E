@@ -11,7 +11,7 @@ if(isset($_SESSION["loggedin"])){
     <html lang="en">
     <head>
         <title>Espace Personnel</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style/style.css">
     </head>
 <body>
 <?php  include "header.php"; ?>

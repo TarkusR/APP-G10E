@@ -9,7 +9,7 @@ if(isset($_GET['logout']))
 <html lang ="en">
 <head>
     <title>Section ludique</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 <?php  include('header.php'); ?>

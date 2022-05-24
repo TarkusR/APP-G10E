@@ -6,7 +6,7 @@ require_once "config.php";
 // Definis les variables pour qu'elles soient vide
 $username = $password = $confirm_password = $email= $tel = $nom = $prenom = $dateNai= $sex ="";
 $username_err = $password_err = $confirm_password_err = $email_err = $tel_err = $nom_err = $prenom_err= $dateNai_err = $sex_err = "";
-
+echo $_SERVER["REQUEST_METHOD"];
 // On check la method de request pour savoir si le form a été submit
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -98,10 +98,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validation du mots de passe
+    $maj = preg_match('@[A-Z]@', $_POST["password"]);
+    $min = preg_match('@[a-z]@', $_POST["password"]);
+    $number = preg_match('@[0-9]@', $_POST["password"]);
+
     if(empty(trim($_POST["password"]))){
-        $password_err = "entrer un mots de passe.";
+        $password_err = "entrer un mot de passe.";
     } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Le mots de passe doit contenir 6 caractere.";
+        $password_err = "Le mot de passe doit contenir plus de 6 caracteres.";
+    } elseif(strlen(trim($_POST["password"])) > 32){
+        $password_err = "Le mot de passe doit contenir moins de 32 caracteres.";
+    } elseif(!$number || !$min || !$maj){
+        $password_err = "Le mot de passe doit contenir au moins une majuscule, une minuscule et un chiffre";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -162,14 +170,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <meta charset="UTF-8">
     <title>S'enregistrer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="login">
 <div class="registerContainer">
 
     <h2 style="animation: none">Inscription</h2>
     <p>Veuillez saisir les informations demandées</p>
-    <div action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="register-Flex-Container">
         <div class="centreRegister">
         <div >
@@ -236,7 +244,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Possédez-vous déjà un compte ? <a href="login.php" class="seconnecterRegister">Connectez-vous ici</a></p>
         </div>
     </form>
+</form>
 </div>
-
 </body>
 </html>

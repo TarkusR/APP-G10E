@@ -3,17 +3,20 @@ session_start();
 
 ?>
 <?php
-$question = 'bonjour';
-$reponse = 'oui';
 
-$question2='';
-$reponse2 = '';
+
+
+/*$question = $db->prepare('SELECT text FROM question WHERE IDQuestion = 1');
+
+$question->execute();
+$result2 = $question->fetch();*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>À propos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body >
 <?php  include "header.php"; ?>
@@ -73,10 +76,10 @@ $reponse2 = '';
     <input id='faq-f' type='checkbox'>
     <label for='faq-f'>
         <?php
-        echo "<p class='faq-heading'>$question</p>";?>
+        echo "<p class='faq-heading'></p>";?>
         <div class='faq-arrow'></div>
         <?php
-        echo "<p class='faq-text'>$reponse</p></label></label>";?>
+        echo "<p class='faq-text'></p></label></label>";?>
 
 </div>
 <div class="consult-data-descriptor">

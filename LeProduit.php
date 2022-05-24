@@ -7,7 +7,7 @@ session_start();
 <!DOCTYPE html>
 <head>
     <title>Le Produit</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 <?php  include "header.php"; ?>
