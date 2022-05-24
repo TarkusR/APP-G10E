@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validation du prenom
     if(empty(trim($_POST["prenom"]))){
         $prenom_err = "Entrer un prenom valide.";
-    } elseif(!ctype_alnum($_POST["prenom"])){
+    } elseif(!preg_match("/[A-Za-z]+/",$_POST["prenom"])){
         $prenom_err = "Entrer un prenom valide.";
     } else{
         $prenom = trim($_POST["prenom"]);
