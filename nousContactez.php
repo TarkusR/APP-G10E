@@ -6,6 +6,53 @@ if(isset($_SESSION["loggedin"])){
     header('Location:login.php');
     exit();
 }
+
+$nom = $prenom = $email = $message = "";
+$nomErr = $prenomErr = $emailErr = $messageErr =  "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["nom"])) {
+        $nomErr = "* N'oublies pas d'écrire ton nom";
+    } else {
+        $nom = test_input($_POST["nom"]);
+    }
+
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["prenom"])) {
+        $prenomErr = "* N'oublies pas d'écrire ton prénom";
+    } else {
+        $prenom = test_input($_POST["prenom"]);
+    }
+
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["email"])) {
+        $emailErr = "* N'oublies pas d'entrer ton e-mail";
+    } else {
+        $email = test_input($_POST["email"]);
+    }
+
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["message"])) {
+        $messageErr = "* N'oublies pas de nous poser ta question ! ";
+    } else {
+        $message = test_input($_POST["message"]);
+    }
+
+}
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +64,19 @@ if(isset($_SESSION["loggedin"])){
     <link rel="stylesheet" href="style/style.css" >
 
 </head>
+
+<script>
+    function popupfunction() {
+        var result = confirm("Confirmer l'envoie de la question ?");
+        if (result==true) {
+            alert("C'est envoyé! Nous te répondrons dans les meilleurs délais")
+        } else {
+
+        }
+    }
+
+</script>
+
     <body>
     <?php  include "header.php"; ?>
     <div class="login-root">
@@ -60,21 +120,28 @@ if(isset($_SESSION["loggedin"])){
                     <div class="formbg">
                         <div class="formbg-inner padding-horizontal--48">
                             <span class="padding-bottom--15">Nous Contacter</span>
-                            <form id="stripe-login">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="stripe-login">
                                 <div class="field padding-bottom--24">
+                                    <p class = "error"> <?php echo $nomErr ?> </p>
                                     <input type="text" name="nom" placeholder="Nom">
                                 </div>
                                 <div class="field padding-bottom--24">
+                                    <p class = "error"> <?php echo $prenomErr ?> </p>
                                     <input type="text" name="prenom" placeholder="Prénom">
                                 </div>
                                 <div class="field padding-bottom--24">
+                                    <p class = "error"> <?php echo $emailErr ?> </p>
                                     <input type="email" name="email" placeholder="E-mail">
                                 </div>
                                 <div class="field padding-bottom--24">
-                                    <textarea name="text" placeholder="   Message"></textarea>
+                                    <input type="number" name="number" placeholder="Numéro de téléphone (optionel)">
                                 </div>
                                 <div class="field padding-bottom--24">
-                                    <input type="submit" name="submit" value="Continue">
+                                    <p class = "error"> <?php echo $messageErr ?> </p>
+                                    <textarea name="message" placeholder="   Message"><?php echo htmlspecialchars($message); ?></textarea>
+                                </div>
+                                <div class="field padding-bottom--24">
+                                    <input onclick="popupfunction()" type="submit" name="submit" value="Continue">
                                 </div>
                             </form>
                         </div>
@@ -114,6 +181,12 @@ if(isset($_SESSION["loggedin"])){
         color: #5469d4;
         text-decoration: unset;
     }
+
+    .error {
+        padding-bottom: 5%;
+        color : crimson;
+    }
+
     .login-root {
         background: #fff;
         display: flex;
@@ -198,7 +271,7 @@ if(isset($_SESSION["loggedin"])){
 
 
     textarea {
-        font-size: 100%;
+        font-size: 105%;
         width: 100%;
         height: 250px;
         border: 1px solid #d9d9d9 ;
