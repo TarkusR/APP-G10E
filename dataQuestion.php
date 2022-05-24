@@ -18,7 +18,7 @@ if(!$mysqli){
 }
 
 
-$query = sprintf('SELECT idQuestion,text FROM question ORDER BY timeStampe ');
+$query = sprintf('SELECT idQuestion,question,trueRep1,rep2,rep3,rep4 FROM question ORDER BY timeStampe ');
 
 
 $result = $mysqli->query($query);

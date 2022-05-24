@@ -70,8 +70,8 @@ if(isset($_SESSION["loggedin"])){
                                 <div class="field padding-bottom--24">
                                     <input type="email" name="email" placeholder="E-mail">
                                 </div>
-                                <div class="field padding-bottom--24 textarea">
-                                    <textarea name="text" cols="55" rows="5" placeholder="Message"></textarea>
+                                <div class="field padding-bottom--24">
+                                    <textarea name="text" placeholder="   Message"></textarea>
                                 </div>
                                 <div class="field padding-bottom--24">
                                     <input type="submit" name="submit" value="Continue">
@@ -194,6 +194,17 @@ if(isset($_SESSION["loggedin"])){
     }
     .padding-bottom--15 {
         padding-bottom: 15px;
+    }
+
+
+    textarea {
+        font-size: 100%;
+        width: 100%;
+        height: 250px;
+        border: 1px solid #d9d9d9 ;
+        border-radius: 3%;
+
+
     }
 
 
