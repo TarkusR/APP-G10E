@@ -4,13 +4,68 @@ session_start();
 ?>
 <?php
 
+define('DB_SERVER', 'herogu.garageisep.com');
+define('DB_USERNAME', 'mX9Rm4LPla_infinite_g');
+define('DB_PASSWORD', 'nWWkuPe1p5xajcco');
+define('DB_NAME', 'GpyQOrqTrS_infinite_g');
+$mysqli = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+if(!$mysqli){
+    die("Connection failed: " . $mysqli->error);
+}
+$query = sprintf('SELECT question,reponse FROM FAQQuestion WHERE IDQuestion = 1');
+$result = $mysqli->query($query);
+$question = array();
+foreach ($result as $row) {
+    $question[] = $row;
+}
+$question6=$row['question'];
+$reponse6=$row['reponse'];
+
+$query = sprintf('SELECT question,reponse FROM FAQQuestion WHERE IDQuestion = 2');
+$result = $mysqli->query($query);
+$question = array();
+foreach ($result as $row) {
+    $question[] = $row;
+}
+$question1=$row['question'];
+$reponse1=$row['reponse'];
+
+$query = sprintf('SELECT question,reponse FROM FAQQuestion WHERE IDQuestion = 3');
+$result = $mysqli->query($query);
+$question = array();
+foreach ($result as $row) {
+    $question[] = $row;
+}
+$question2=$row['question'];
+$reponse2=$row['reponse'];
+
+$query = sprintf('SELECT question,reponse FROM FAQQuestion WHERE IDQuestion = 4');
+$result = $mysqli->query($query);
+$question = array();
+foreach ($result as $row) {
+    $question[] = $row;
+}
+$question3=$row['question'];
+$reponse3=$row['reponse'];
 
 
-/*$question = $db->prepare('SELECT text FROM question WHERE IDQuestion = 1');
+$query = sprintf('SELECT question,reponse FROM FAQQuestion WHERE IDQuestion = 5');
+$result = $mysqli->query($query);
+$question = array();
+foreach ($result as $row) {
+    $question[] = $row;
+}
+$question4=$row['question'];
+$reponse4=$row['reponse'];
 
-$question->execute();
-$result2 = $question->fetch();*/
-
+$query = sprintf('SELECT question,reponse FROM FAQQuestion WHERE IDQuestion = 6');
+$result = $mysqli->query($query);
+$question = array();
+foreach ($result as $row) {
+    $question[] = $row;
+}
+$question5=$row['question'];
+$reponse5=$row['reponse'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,38 +103,58 @@ $result2 = $question->fetch();*/
     <div class="faq-title"><h1>Questions les plus frequentes</h1></div>
     <input id='faq-a' type='checkbox'>
     <label for='faq-a'>
-        <p class="faq-heading">Comment puis-je contacter le support d'Infinite Measure?</p>
+        <?php
+        echo "<p class='faq-heading'>$question1</p>";
+        ?>
         <div class='faq-arrow'></div>
-        <p class="faq-text">L'onglet "Nous contacter" vous permet d'envoyer un message directement au support d'Infinite Measure</p>
+        <?php
+        echo "<p class='faq-text'>$reponse1</p>";
+        ?>
     </label>
     <input id='faq-b' type='checkbox'>
     <label for='faq-b'>
-        <p class="faq-heading">Comment puis-je améliorer ma gestion du stress?</p>
+        <?php
+        echo "<p class='faq-heading'>$question2</p>";
+        ?>
         <div class='faq-arrow'></div>
-        <p class="faq-text">Vous trouverez des articles décrivant les différentes sources de stress ainsi que des aides pour le combattre dans la rubrique "Ludique"</p></label>
+        <?php
+        echo "<p class='faq-text'>$reponse2</p>";
+        ?></label>
     <input id='faq-c' type='checkbox'>
     <label for='faq-c'>
-        <p class="faq-heading">Comment obtenir votre produit?</p>
+        <?php
+        echo "<p class='faq-heading'>$question3</p>";
+        ?>
         <div class='faq-arrow'></div>
-        <p class="faq-text">Merci de nous contacter par mail à l'adresse renseignée en bas de page</p></label>
+        <?php
+        echo "<p class='faq-text'>$reponse3</p>";
+        ?></label>
     <input id='faq-d' type='checkbox'>
     <label for='faq-d'>
-        <p class="faq-heading">Comment consulter mes données?</p>
+        <?php
+        echo "<p class='faq-heading'>$question4</p>";
+        ?>
         <div class='faq-arrow'></div>
-        <p class="faq-text">Vous retrouverez les données de votre fréquence cardiaque, du taux de CO2 et de la température dans la rubrique "Mon compte" après vous être connecté.</p></label>
+        <?php
+        echo "<p class='faq-text'>$reponse4</p>";
+        ?></label>
     <input id='faq-e' type='checkbox'>
     <label for='faq-e'>
-        <p class="faq-heading">Quel est le prix de la solution d'Infinite Measure?</p>
+        <?php
+        echo "<p class='faq-heading'>$question5</p>";
+        ?>
         <div class='faq-arrow'></div>
-        <p class="faq-text">Réponse à venir sous peu.</p></label></label>
+        <?php
+        echo "<p class='faq-text'>$reponse5</p>";
+        ?></label></label>
     <input id='settings' type='checkbox'>
     <input id='faq-f' type='checkbox'>
     <label for='faq-f'>
         <?php
-        echo "<p class='faq-heading'></p>";?>
+        echo "<p class='faq-heading'>$question6</p>";?>
         <div class='faq-arrow'></div>
         <?php
-        echo "<p class='faq-text'></p></label></label>";?>
+        echo "<p class='faq-text'>$reponse6</p></label></label>";?>
 
 </div>
 <div class="consult-data-descriptor">

@@ -6,7 +6,6 @@ require_once "config.php";
 // Definis les variables pour qu'elles soient vide
 $username = $password = $confirm_password = $email= $tel = $nom = $prenom = $dateNai= $sex ="";
 $username_err = $password_err = $confirm_password_err = $email_err = $tel_err = $nom_err = $prenom_err= $dateNai_err = $sex_err = "";
-echo $_SERVER["REQUEST_METHOD"];
 // On check la method de request pour savoir si le form a été submit
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -68,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validation du prenom
     if(empty(trim($_POST["prenom"]))){
         $prenom_err = "Entrer un prenom valide.";
-    } elseif(!ctype_alnum($_POST["prenom"])){
+    } elseif(!preg_match("/[A-Za-z]+/",$_POST["prenom"])){
         $prenom_err = "Entrer un prenom valide.";
     } else{
         $prenom = trim($_POST["prenom"]);
@@ -77,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validation du nom
     if(empty(trim($_POST["nom"]))){
         $nom_err = "Entrer un nom valide.";
-    } elseif(!ctype_alnum($_POST["nom"])){
+    } elseif(!preg_match("/[A-Za-z]+/",$_POST["nom"])){
         $nom_err = "Entrer un nom valide.";
     } else{
         $nom = trim($_POST["nom"]);
