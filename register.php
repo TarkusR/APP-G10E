@@ -6,7 +6,6 @@ require_once "config.php";
 // Definis les variables pour qu'elles soient vide
 $username = $password = $confirm_password = $email= $tel = $nom = $prenom = $dateNai= $sex ="";
 $username_err = $password_err = $confirm_password_err = $email_err = $tel_err = $nom_err = $prenom_err= $dateNai_err = $sex_err = "";
-echo $_SERVER["REQUEST_METHOD"];
 // On check la method de request pour savoir si le form a été submit
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
