@@ -3,11 +3,7 @@ session_start();
 
 ?>
 <?php
-try {
-    $db = new PDO('mysql:host=localhost:3306;dbname=ce1;charset=utf8', 'root', '');
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
+
 
 
 /*$question = $db->prepare('SELECT text FROM question WHERE IDQuestion = 1');
