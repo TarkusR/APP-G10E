@@ -3,7 +3,7 @@
 <script type="text/javascript" src="js/quizz.js"></script>
 <div id="quiz">
     <h1 id="quiz-name"></h1>
-    <button id="submit-button">Soummettre le quiz</button>
+    <button id="submit-button">Soumettre le quiz</button>
     <button id="next-question-button">Prochaine question</button>
     <button id="prev-question-button">Question précedente</button>
 
@@ -11,7 +11,7 @@
 
         <p id="quiz-results-message"></p>
         <p id="quiz-results-score"></p>
-        <button id="quiz-retry-button">Recommancer</button>
+        <button id="quiz-retry-button">Recommencer</button>
 
     </div>
 </div>

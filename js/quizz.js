@@ -1,24 +1,25 @@
+var all_questions = [
 
-var all_questions = [{
-    question_string: "TEST QUESTION",
+
+{ question_string:"Test question 1" ,
     choices: {
         correct: "1",
         wrong: ["2", "3", "4"]
     }
 }, {
-    question_string: "TEST QUESTION",
+    question_string: "TEST QUESTION 2",
     choices: {
         correct: "1",
         wrong: ["2", "3", "4"]
     }
 },{
-    question_string: "TEST QUESTION",
+    question_string: "TEST QUESTION 3",
     choices: {
         correct: "1",
         wrong: ["2", "3", "4"]
     }
 }, {
-    question_string: "TEST QUESTION",
+    question_string: "TEST QUESTION 4",
     choices: {
         correct: "1",
         wrong: ["2", "3", "4"]

@@ -115,7 +115,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
 <div class="login-container">
 
-    <div class = "centreRegister">
+    <div class = "centreLogin">
         <div class="centreRegister-button">
         <img width="150 px" height="150 px"  src="logomeasure.png">
         <h2>Connexion</h2>
@@ -128,7 +128,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div >
+        <div class="centreLogin">
             <div>
                 <label>Nom de compte</label> <br>
                 <input class="InputRegister" type="text" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
@@ -139,10 +139,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input class="InputRegister" type="password" name="password"  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <p ><?php echo $password_err; ?></p>
             </div>
-            <div  class="centreRegister">
+            <div  class="centreLogin">
                 <input class="boutonRegister" type="submit"  value="Login">
             </div>
-            <div class="centreRegister">
+            <div class="centreLogin">
             <p>Pas de compte ? <a class="seconnecterRegister" href="register.php">Enregistrez vous maintenant </a></p>
             </div>
         </div>

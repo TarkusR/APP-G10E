@@ -173,6 +173,15 @@ h1, h2, h3, h4, p{
     text-align: left;
     margin-left: 10vh;
 }
+
+.centreLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+
 .register-Flex-Container{
     display: flex;
     flex-direction: row;
