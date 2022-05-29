@@ -53,6 +53,19 @@ function test_input($data) {
     return $data;
 }
 
+define('DB_SERVER', 'herogu.garageisep.com');
+define('DB_USERNAME', 'mX9Rm4LPla_infinite_g');
+define('DB_PASSWORD', 'nWWkuPe1p5xajcco');
+define('DB_NAME', 'GpyQOrqTrS_infinite_g');
+
+$mysqli = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+if(!$mysqli){
+    die("Connection failed: " . $mysqli->error);
+}
+$reponsesAuteur = $mysqli->prepare('INSERT INTO question(message) VALUES (:message)');
+$reponsesAuteur->bindParam("message", $_POST['message']);
+$reponsesAuteur->execute();
+
 ?>
 
 <!DOCTYPE html>
