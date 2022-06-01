@@ -20,7 +20,7 @@ if(!$mysqli){
 
 
 
-$query = sprintf('SELECT donnee, heure FROM data WHERE IDUser = '.$_SESSION["id"].' AND sensorType = "c02" ORDER BY heure ');
+$query = sprintf('SELECT donnee, heure FROM data WHERE IDUser = '.$_SESSION["id"].' AND sensorType = "cardiaque" ORDER BY heure ');
 
 //execute query
 $result = $mysqli->query($query);

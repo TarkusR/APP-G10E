@@ -1,6 +1,9 @@
+var dataSet ='data.php';
+
+
 $(document).ready(function(){
     $.ajax({
-        url: "data.php",
+        url: dataSet,
         method: "GET",
         success: function(data) {
             console.log(data);

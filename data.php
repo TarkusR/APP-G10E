@@ -19,7 +19,7 @@ if(!$mysqli){
 }
 
 
-$query = sprintf('SELECT donnee, heure FROM data WHERE idUSER = '.$_SESSION["id"].' AND jour <= "'. $date .'" ORDER BY heure ');
+$query = sprintf('SELECT donnee, heure FROM data WHERE idUSER = '.$_SESSION["id"].' AND jour <= "'. $date .'" AND sensorType = "temperature" ORDER BY heure ');
 
 //execute query
 $result = $mysqli->query($query);

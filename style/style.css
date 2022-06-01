@@ -782,6 +782,7 @@ section .wave.wave3{
 .account-descriptor-usable{
     margin-left: 15vh;
     text-align: right;
+    align-self: flex-end;
 }
 
 .chart-container {

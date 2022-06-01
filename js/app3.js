@@ -1,4 +1,4 @@
-var dataSet ='data2.php';
+var dataSet ='data3.php';
 
 
 $(document).ready(function(){
@@ -19,7 +19,7 @@ $(document).ready(function(){
                 labels: heure,
                 datasets : [
                     {
-                        label: 'Concentration de CO2',
+                        label: 'Rythme cardiaque',
                         backgroundColor: 'rgba(200, 200, 200, 0.75)',
                         borderColor: 'rgba(200, 200, 200, 0.75)',
                         hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
@@ -29,7 +29,7 @@ $(document).ready(function(){
                 ]
             };
 
-            var ctx = $("#mycanvas2");
+            var ctx = $("#mycanvas3");
 
             var barGraph = new Chart(ctx, {
                 type: 'line',

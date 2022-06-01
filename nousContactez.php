@@ -7,45 +7,6 @@ if(isset($_SESSION["loggedin"])){
     exit();
 }
 
-$nom = $prenom = $email = $message = "";
-$nomErr = $prenomErr = $emailErr = $messageErr =  "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["nom"])) {
-        $nomErr = "* N'oublies pas d'écrire ton nom";
-    } else {
-        $nom = test_input($_POST["nom"]);
-    }
-
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["prenom"])) {
-        $prenomErr = "* N'oublies pas d'écrire ton prénom";
-    } else {
-        $prenom = test_input($_POST["prenom"]);
-    }
-
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["email"])) {
-        $emailErr = "* N'oublies pas d'entrer ton e-mail";
-    } else {
-        $email = test_input($_POST["email"]);
-    }
-
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["message"])) {
-        $messageErr = "* N'oublies pas de nous poser ta question ! ";
-    } else {
-        $message = test_input($_POST["message"]);
-    }
-
-}
-
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -53,18 +14,62 @@ function test_input($data) {
     return $data;
 }
 
-define('DB_SERVER', 'herogu.garageisep.com');
-define('DB_USERNAME', 'mX9Rm4LPla_infinite_g');
-define('DB_PASSWORD', 'nWWkuPe1p5xajcco');
-define('DB_NAME', 'GpyQOrqTrS_infinite_g');
+$nom = $prenom = $email = $message = "";
+$nomErr = $prenomErr = $emailErr = $messageErr =  "";
 
-$mysqli = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-if(!$mysqli){
-    die("Connection failed: " . $mysqli->error);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+    if (empty($_POST["nom"])) {
+        $nomErr = "* N'oublies pas d'écrire ton nom";
+    } else {
+        $nom = test_input($_POST["nom"]);
+    }
+
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["prenom"])) {
+            $prenomErr = "* N'oublies pas d'écrire ton prénom";
+        } else {
+            $prenom = test_input($_POST["prenom"]);
+        }
+
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["email"])) {
+            $emailErr = "* N'oublies pas d'entrer ton e-mail";
+        } else {
+            $email = test_input($_POST["email"]);
+        }
+
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["message"])) {
+            $messageErr = "* N'oublies pas de nous poser ta question ! ";
+        } else {
+            $message = test_input($_POST["message"]);
+        }
+
+    }
+
+
+
+    define('DB_SERVER', 'herogu.garageisep.com');
+    define('DB_USERNAME', 'mX9Rm4LPla_infinite_g');
+    define('DB_PASSWORD', 'nWWkuPe1p5xajcco');
+    define('DB_NAME', 'GpyQOrqTrS_infinite_g');
+
+    $mysqli = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if(!$mysqli){
+        die("Connection failed: " . $mysqli->error);
+    }
+    $reponsesAuteur = $mysqli->prepare("INSERT INTO question(question) VALUES ( '$message' )");
+    $reponsesAuteur->execute();
 }
-$reponsesAuteur = $mysqli->prepare('INSERT INTO question(message) VALUES (:message)');
-$reponsesAuteur->bindParam("message", $_POST['message']);
-$reponsesAuteur->execute();
+
+
 
 ?>
 

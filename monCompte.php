@@ -19,13 +19,22 @@ include_once "header.php"
     <div class="account-descriptor-text">
         <h1>Information de compte</h1>
             <?php
-            echo '<div class="account-descriptor-title"><p> Votre Nom :</p><p class="account-descriptor-usable">'.$_SESSION['name'].'</p></div>';
-            echo '<div class="account-descriptor-title"><p> Votre prenom :</p><p class="account-descriptor-usable">'.$_SESSION['firstName'].'</p></div>';
-            echo '<div class="account-descriptor-title"><p> Numéro de telephone :</p><p class="account-descriptor-usable">+33'.$_SESSION['phoneNumber'].'</p></div>';
-            echo '<div class="account-descriptor-title"><p> Date de naissance :</p><p class="account-descriptor-usable">'.$_SESSION['dateNaissance'].'</p></div>';
-            echo '<div class="account-descriptor-title"><p> Sexe :</p><p class="account-descriptor-usable">'.$_SESSION['sex'].'</p></div>';
-            echo '<div class="account-descriptor-title"><p> Adresse E-mail :</p><p class="account-descriptor-usable">'.$_SESSION['mail'].'</p></div>';
-            echo '<div class="account-descriptor-title"><p> Mots de passe :</p><p class="account-descriptor-usable"> ********</p></div>';
+            if($_SESSION['admin']==1){
+                echo '<div class="account-descriptor-title"><p> Votre Nom :</p><p class="account-descriptor-usable">'.$_SESSION['name'].'</p>&nbsp<a href="editAccount.php?edit=name"><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Votre prenom :</p><p class="account-descriptor-usable">'.$_SESSION['firstName'].'</p>&nbsp<a href=""><p style="text-align: right; font-weight: bold ">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Numéro de telephone :</p><p class="account-descriptor-usable">+33'.$_SESSION['phoneNumber'].'</p>&nbsp<a href=""><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Date de naissance :</p><p class="account-descriptor-usable">'.$_SESSION['dateNaissance'].'</p>&nbsp<a href=""><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Sexe :</p><p class="account-descriptor-usable">'.$_SESSION['sex'].'</p>&nbsp<a href=""><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
+            } else{
+                echo '<div class="account-descriptor-title"><p> Votre Nom :</p><p class="account-descriptor-usable">'.$_SESSION['name'].'</p></div><p>ui</p>';
+                echo '<div class="account-descriptor-title"><p> Votre prenom :</p><p class="account-descriptor-usable">'.$_SESSION['firstName'].'</p></div>';
+                echo '<div class="account-descriptor-title"><p> Numéro de telephone :</p><p class="account-descriptor-usable">+33'.$_SESSION['phoneNumber'].'</p></div>';
+                echo '<div class="account-descriptor-title"><p> Date de naissance :</p><p class="account-descriptor-usable">'.$_SESSION['dateNaissance'].'</p></div>';
+                echo '<div class="account-descriptor-title"><p> Sexe :</p><p class="account-descriptor-usable">'.$_SESSION['sex'].'</p></div>';
+            }
+            echo '<div class="account-descriptor-title"><p> Adresse E-mail :</p><p class="account-descriptor-usable">'.$_SESSION['mail'].'</p>&nbsp<a href=""><p style="text-align: right;font-weight: bold ">Modifier</p></a></div>';
+            echo '<div class="account-descriptor-title"><p> Mots de passe :</p><p class="account-descriptor-usable"> ********</p>&nbsp<a href=""><p style="text-align: right;font-weight: bold ">Modifier</p></a></div>';
+
             if($_SESSION['admin']==1){
                 echo '<div class="account-descriptor-title"><p>Compte : </p><p class="account-descriptor-usable" style="color: red"> Admin </p></div>';
             } else{
@@ -35,15 +44,71 @@ include_once "header.php"
     </div>
     <div class="account-data-container">
         <div class="chart-container">
-            <canvas id="mycanvas"></canvas>
+
+            <a href="monCompte.php?graph=temp"><button>Temperature</button></a>
+            <a href="monCompte.php?graph=c02"><button>C02</button></a>
+            <a href="monCompte.php?graph=card"><button>Capteur cardiaque</button></a>
+
+            <?php
+            if(isset($_GET['graph']))
+            {
+                if($_GET['graph']=='c02')
+                {
+                    echo'<canvas id="mycanvas2" width="400" height="250"></canvas>';
+
+                }elseif ($_GET['graph']=='temp')
+                {
+                    echo '<canvas id="mycanvas" width="400" height="250"></canvas>';
+
+                }elseif($_GET['graph']=='card')
+                {
+                    echo '<canvas id="mycanvas3" width="400" height="250"></canvas>';
+
+                }else
+                {
+                    echo '<canvas id="mycanvas" width="400" height="250"></canvas>';
+
+                }
+            }else
+            {
+                echo '<canvas id="mycanvas" width="400" height="250"></canvas>';
+
+            }
+
+            ?>
+
         </div>
 
 
         <!-- javascript -->
         <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/chart.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/app2.js"></script>
+        <?php
+        if(isset($_GET['graph']))
+        {
+            if($_GET['graph']=='c02')
+            {
+                echo'<script type="text/javascript" src="js/app2.js"></script>';
+
+            }elseif ($_GET['graph']=='temp')
+            {
+                echo '<script type="text/javascript" src="js/app.js"></script>';
+            }elseif($_GET['graph']=='card')
+            {
+                echo '<script type="text/javascript" src="js/app3.js"></script>';
+
+            }else
+            {
+                echo '<script type="text/javascript" src="js/app.js"></script>';
+
+            }
+        }else
+        {
+            echo '<script type="text/javascript" src="js/app.js"></script>';
+        }
+
+        ?>
+
     </div>
 </div>
     <?php
