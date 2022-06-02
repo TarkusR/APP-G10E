@@ -20,6 +20,9 @@
             <div>
                 <h1 class="titreFooter"> Nous contacter </h1>
                 <p class="textFooter"> 06 99 16 87 78 <br> 01 68 82 33 12 <br> stepan.grandjean@gmail.com <br> </p>
+                <div class="mentions-legales">
+                    <a href="CGU.php">Conditions générales d'utilisation</a>
+                </div>
             </div>
 
     </div>

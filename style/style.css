@@ -973,9 +973,12 @@ div.ludique-title-container h1, h2, h3 {
 /* Quiz */
 
 #quiz {
+    font-family: Arial;
+    padding-top: 20vh;
     margin: -44px 50px 0px;
     position: relative;
     width: calc(100% - 100px);
+    padding-bottom: 30vh;
 }
 
 #quiz h1 {
@@ -1060,7 +1063,7 @@ div.ludique-title-container h1, h2, h3 {
 
 #quiz-results-message {
     display: block;
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: bold;
 }
@@ -1106,7 +1109,8 @@ div.ludique-title-container h1, h2, h3 {
 /* Modifier compte css */
 
 .edit-account-container{
-    margin-top: 17vh;
+    margin-top: 20vh;
+    margin-bottom: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1129,10 +1133,19 @@ div.ludique-title-container h1, h2, h3 {
     font-size: 100%;
     margin: 10px;
     border-radius: 25px;
-    background-color: #919191;
+    background-color: lightgrey;
     padding: 10px;
 }
-
+.boutton-edit-account:hover{
+    transition-duration: 0.3s;
+    border: none;
+    text-align: center;
+    font-size: 100%;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: darkgrey;
+    padding: 10px;
+}
 
 /*Visualiser admin*/
 .account-descriptor-container-admin{
@@ -1143,6 +1156,7 @@ div.ludique-title-container h1, h2, h3 {
     align-items: center;
 }
 
+/*Mentions légales*/
 
 .CGU_h1{
     color: black;
@@ -1150,4 +1164,10 @@ div.ludique-title-container h1, h2, h3 {
 
 .CGU_body{
     color: black;
+}
+
+/* Mentions legales footer*/
+.mentions-legales {
+    color: white;
+    text-decoration: none;
 }

@@ -36,7 +36,7 @@ include_once "header.php";
         </div>';
     }
     ?>
-
+    <p></p>
     <div class="edit-account-form-container">
     <form action="<?php  echo 'insertEdit.php?edit='.$_GET["edit"].'&idAccount='.$_GET["idAccount"].''; ?>">
         <h1>Modifier <?php
@@ -64,19 +64,19 @@ include_once "header.php";
         <label for="form-input-edit"><?php
 
             if($_GET["edit"]=="name"){
-                echo 'Nouveau nom';
+                echo '<p>Nouveau nom</p>';
             }elseif ($_GET["edit"]=="firstName"){
-                echo 'Nouveau prenom';
+                echo '<p>Nouveau prenom</p>';
             }elseif ($_GET["edit"]=="phoneNumber"){
-                echo 'Nouveau numéro de téléphone';
+                echo '<p>Nouveau numéro de téléphone</p>';
             }elseif ($_GET["edit"]=="birthDate"){
-                echo 'Nouvelle date de naissance';
+                echo '<p>Nouvelle date de naissance</p>';
             }elseif ($_GET["edit"]=="sex"){
-                echo 'Nouveau sexe';
+                echo '<p>Nouveau sexe</p>';
             }elseif ($_GET["edit"]=="mail"){
-                echo "Nouvelle adresse e-mail";
+                echo "<p>Nouvelle adresse e-mail</p>";
             }elseif ($_GET["edit"]=="password"){
-                echo 'Nouveau  mots de passe';
+                echo '<p>Nouveau  mots de passe</p>';
             } ?><br></label><?php if($_GET['edit']!="sex"){
                echo '<input class="InputRegister" type=';
                if($_GET["edit"]=="name"){

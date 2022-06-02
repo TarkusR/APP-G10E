@@ -1,3 +1,7 @@
+
+<?php
+include_once "header.php"
+?>
 <link rel="stylesheet" href="style/style.css">
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 <?php
@@ -46,62 +50,32 @@ foreach ($result as $row) {
 
         { question_string:question[0],
             choices: {
-                correct: reponse[0],
-                wrong: [reponse[1], reponse[2], reponse[3]]
+                correct: reponse[2],
+                wrong: [reponse[3], reponse[0], reponse[1]]
             }
         }, {
             question_string: question[1],
             choices: {
-                correct: reponse[4],
-                wrong: [reponse[5], reponse[6], reponse[7]]
+                correct: reponse[7],
+                wrong: [reponse[5], reponse[6], reponse[4]]
             }
         },{
             question_string: question[2],
             choices: {
-                correct: reponse[8],
-                wrong: [reponse[9], reponse[10], reponse[11]]
+                correct: reponse[10],
+                wrong: [reponse[11], reponse[8], reponse[9]]
             }
         }, {
             question_string: question[3],
             choices: {
-                correct: reponse[12],
-                wrong: [reponse[13], reponse[14], reponse[15]]
+                correct: reponse[13],
+                wrong: [reponse[12], reponse[15], reponse[14]]
             }
         },{
             question_string: question[4],
             choices: {
-                correct: reponse[16],
-                wrong: [reponse[17], reponse[18], reponse[19]]
-            }
-        },{
-            question_string: question[5],
-            choices: {
-                correct: reponse[20],
-                wrong: [reponse[21], reponse[22], reponse[23]]
-            }
-        },{
-            question_string: question[6],
-            choices: {
-                correct: reponse[24],
-                wrong: [reponse[25], reponse[26], reponse[27]]
-            }
-        },{
-            question_string: question[7],
-            choices: {
-                correct: reponse[28],
-                wrong: [reponse[29], reponse[30], reponse[31]]
-            }
-        },{
-            question_string: question[8],
-            choices: {
-                correct: reponse[32],
-                wrong: [reponse[33], reponse[34], reponse[35]]
-            }
-        },{
-            question_string: question[9],
-            choices: {
-                correct: reponse[36],
-                wrong: [reponse[37], reponse[38], reponse[39]]
+                correct: reponse[18],
+                wrong: [reponse[19], reponse[16], reponse[17]]
             }
         }];
 
@@ -323,3 +297,6 @@ foreach ($result as $row) {
 
     </div>
 </div>
+<?php
+include_once "footer.php"
+?>
