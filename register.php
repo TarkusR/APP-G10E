@@ -213,7 +213,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p><?php echo $dateNai_err; ?></p>
         </div>
         <div>
-            <label>Sex :</label> <br>
+            <label>Sexe :</label> <br>
             <input  type="radio" name="sex" id="homme" value="homme" />
             <label for="homme">Homme</label>
 

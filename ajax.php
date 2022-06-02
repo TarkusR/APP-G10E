@@ -17,7 +17,7 @@ if (isset($_POST['search'])) {
 
     $Name = $_POST['search'];
 
-    $Query = "SELECT name,firstName FROM utilisateur WHERE name LIKE '$Name%' LIMIT 5";
+    $Query = "SELECT name,firstName,idUser FROM utilisateur WHERE name LIKE '$Name%' LIMIT 5";
 
     $ExecQuery = MySQLi_query($con, $Query);
 
@@ -29,7 +29,7 @@ if (isset($_POST['search'])) {
         ?>
 
         <li class="search-bar-result" onclick='fill("<?php echo $Result['name']." ".$Result['firstName']; ?>")'>
-            <a class="search-bar-result">
+            <a href="adminAccountViewer.php?id=<?= $Result['idUser'] ?>" class="search-bar-result">
                 <?php echo $Result['name']." ".$Result['firstName']; ?>
         </li></a>
 

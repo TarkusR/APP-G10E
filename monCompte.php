@@ -20,11 +20,11 @@ include_once "header.php"
         <h1>Information de compte</h1>
             <?php
             if($_SESSION['admin']==1){
-                echo '<div class="account-descriptor-title"><p> Votre Nom :</p><p class="account-descriptor-usable">'.$_SESSION['name'].'</p>&nbsp<a href="editAccount.php?edit=name"><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
-                echo '<div class="account-descriptor-title"><p> Votre prenom :</p><p class="account-descriptor-usable">'.$_SESSION['firstName'].'</p>&nbsp<a href=""><p style="text-align: right; font-weight: bold ">Modifier</p></a></div>';
-                echo '<div class="account-descriptor-title"><p> Numéro de telephone :</p><p class="account-descriptor-usable">+33'.$_SESSION['phoneNumber'].'</p>&nbsp<a href=""><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
-                echo '<div class="account-descriptor-title"><p> Date de naissance :</p><p class="account-descriptor-usable">'.$_SESSION['dateNaissance'].'</p>&nbsp<a href=""><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
-                echo '<div class="account-descriptor-title"><p> Sexe :</p><p class="account-descriptor-usable">'.$_SESSION['sex'].'</p>&nbsp<a href=""><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Votre Nom :</p><p class="account-descriptor-usable">'.$_SESSION['name'].'</p>&nbsp<a href="editAccount.php?edit=name&idAccount='.$_SESSION['id'].'"><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Votre prenom :</p><p class="account-descriptor-usable">'.$_SESSION['firstName'].'</p>&nbsp<a href="editAccount.php?edit=firstName&idAccount='.$_SESSION['id'].'"><p style="text-align: right; font-weight: bold ">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Numéro de telephone :</p><p class="account-descriptor-usable">+33'.$_SESSION['phoneNumber'].'</p>&nbsp<a href="editAccount.php?edit=phonenUmber&idAccount='.$_SESSION['id'].'"><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Date de naissance :</p><p class="account-descriptor-usable">'.$_SESSION['dateNaissance'].'</p>&nbsp<a href="editAccount.php?edit=birthDate&idAccount='.$_SESSION['id'].'"><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
+                echo '<div class="account-descriptor-title"><p> Sexe :</p><p class="account-descriptor-usable">'.$_SESSION['sex'].'</p>&nbsp<a href="editAccount.php?edit=sex&idAccount='.$_SESSION['id'].'"><p style="text-align: right; font-weight: bold">Modifier</p></a></div>';
             } else{
                 echo '<div class="account-descriptor-title"><p> Votre Nom :</p><p class="account-descriptor-usable">'.$_SESSION['name'].'</p></div><p>ui</p>';
                 echo '<div class="account-descriptor-title"><p> Votre prenom :</p><p class="account-descriptor-usable">'.$_SESSION['firstName'].'</p></div>';
@@ -32,8 +32,8 @@ include_once "header.php"
                 echo '<div class="account-descriptor-title"><p> Date de naissance :</p><p class="account-descriptor-usable">'.$_SESSION['dateNaissance'].'</p></div>';
                 echo '<div class="account-descriptor-title"><p> Sexe :</p><p class="account-descriptor-usable">'.$_SESSION['sex'].'</p></div>';
             }
-            echo '<div class="account-descriptor-title"><p> Adresse E-mail :</p><p class="account-descriptor-usable">'.$_SESSION['mail'].'</p>&nbsp<a href=""><p style="text-align: right;font-weight: bold ">Modifier</p></a></div>';
-            echo '<div class="account-descriptor-title"><p> Mots de passe :</p><p class="account-descriptor-usable"> ********</p>&nbsp<a href=""><p style="text-align: right;font-weight: bold ">Modifier</p></a></div>';
+            echo '<div class="account-descriptor-title"><p> Adresse E-mail :</p><p class="account-descriptor-usable">'.$_SESSION['mail'].'</p>&nbsp<a href="editAccount.php?edit=mail&idAccount='.$_SESSION['id'].'"><p style="text-align: right;font-weight: bold ">Modifier</p></a></div>';
+            echo '<div class="account-descriptor-title"><p> Mots de passe :</p><p class="account-descriptor-usable"> ********</p>&nbsp<a href="editAccount.php?edit=password&idAccount='.$_SESSION['id'].'"><p style="text-align: right;font-weight: bold ">Modifier</p></a></div>';
 
             if($_SESSION['admin']==1){
                 echo '<div class="account-descriptor-title"><p>Compte : </p><p class="account-descriptor-usable" style="color: red"> Admin </p></div>';
@@ -111,10 +111,17 @@ include_once "header.php"
 
     </div>
 </div>
+
     <?php
     if($_SESSION['admin']==1){
+        if(isset($_GET["success"])){
+            $ban = '<h2 style="color: red; animation: none">Compte banni avec succès</h2>';
+        }else{
+            $ban='';
+        }
         echo '
         <div class="admin-search-bar-container">
+        '.$ban.'
             <div><h1>Rechercher un utilisateur</h1></div>
                 <div class="form-group field">
                     <script type="text/javascript" src="js/script.js"></script>

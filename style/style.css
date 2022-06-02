@@ -254,7 +254,6 @@ h1, h2, h3, h4, p{
     margin: 10px;
     border-radius: 25px;
     background-color: white;
-
     padding: 10px;
 }
 
@@ -1075,4 +1074,44 @@ div.ludique-title-container h1, h2, h3 {
     cursor: pointer;
     outline: none;
 
+}
+
+/* Modifier compte css */
+
+.edit-account-container{
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-account-container h1{
+    color: black;
+}
+
+.edit-account-admin-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boutton-edit-account{
+    transition-duration: 0.3s;
+    border: none;
+    text-align: center;
+    font-size: 100%;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: #919191;
+    padding: 10px;
+}
+
+
+/*Visualiser admin*/
+.account-descriptor-container-admin{
+    margin-top: 20vh;
+    margin-bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
