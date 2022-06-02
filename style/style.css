@@ -956,6 +956,20 @@ div.ludique-title-container h1, h2, h3 {
     margin-bottom: 50px;
 }
 
+.content-text-ludique{
+    display: flex;
+    margin-top: 35vh;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.content-outside-ludique{
+    position: relative;
+    height: 100%;
+    z-index: 999;
+}
+
 /* Quiz */
 
 #quiz {
@@ -965,7 +979,7 @@ div.ludique-title-container h1, h2, h3 {
 }
 
 #quiz h1 {
-    color: #FAFAFA;
+    color: black;
     font-weight: 600;
     font-size: 36px;
     text-transform: uppercase;
@@ -977,28 +991,28 @@ div.ludique-title-container h1, h2, h3 {
     float: left;
     margin: 8px 0px 0px 8px;
     padding: 4px 8px;
-    background: #9ACFCC;
-    color: #00403C;
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 56%));
+    color: black;
     font-size: 14px;
     cursor: pointer;
     outline: none;
 }
 
 #quiz button:hover {
-    background: #36a39c;
-    color: #FFF;
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 66%));
+    color: black;
 }
 
 #quiz button:disabled {
     opacity: 0.5;
-    background: #9ACFCC;
-    color: #00403C;
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 56%));
+    color: black;
     cursor: default;
 }
 
 #question {
     padding: 20px;
-    background: #FAFAFA;
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 56%));
     text-align: center;
 }
 
@@ -1016,19 +1030,19 @@ div.ludique-title-container h1, h2, h3 {
     display: inline-block;
     margin: 4px;
     padding: 8px;
-    background: #FAE3BB;
-    color: #4C3000;
+    background: white;
+    color: black;
     width: calc(50% - 8px);
     min-width: 50px;
     cursor: pointer;
 }
 
 #question label:hover {
-    background: #EBBB67;
+    background: grey;
 }
 
 #question input[type=radio]:checked + label {
-    background: #CB8306;
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 26%));
     color: #FAFAFA;
 }
 
@@ -1046,7 +1060,7 @@ div.ludique-title-container h1, h2, h3 {
 
 #quiz-results-message {
     display: block;
-    color: #00403C;
+    color: black;
     font-size: 20px;
     font-weight: bold;
 }
@@ -1068,8 +1082,21 @@ div.ludique-title-container h1, h2, h3 {
     float: left;
     margin: 8px 0px 0px 8px;
     padding: 4px 8px;
-    background: #9ACFCC;
-    color: #00403C;
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 26%));
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+
+}
+
+#quiz-return-button {
+
+    float: left;
+    margin: 8px 0px 0px 8px;
+    padding: 4px 8px;
+    background: linear-gradient(to left, dodgerblue, hsl(260, 100%, 26%));
+    color: Black;
     font-size: 14px;
     cursor: pointer;
     outline: none;

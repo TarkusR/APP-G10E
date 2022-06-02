@@ -42,7 +42,7 @@ include_once "header.php";
         <h1>Modifier <?php
             if($_GET["edit"]=="name"){
                 echo 'le nom';
-            }elseif ($_GET["edit"]=="firstname"){
+            }elseif ($_GET["edit"]=="firstName"){
                 echo 'le prenom';
             }elseif ($_GET["edit"]=="phoneNumber"){
                 echo 'le numéro de téléphone';
@@ -62,9 +62,10 @@ include_once "header.php";
 
         </h1>
         <label for="form-input-edit"><?php
+
             if($_GET["edit"]=="name"){
                 echo 'Nouveau nom';
-            }elseif ($_GET["edit"]=="firstname"){
+            }elseif ($_GET["edit"]=="firstName"){
                 echo 'Nouveau prenom';
             }elseif ($_GET["edit"]=="phoneNumber"){
                 echo 'Nouveau numéro de téléphone';

@@ -5,13 +5,11 @@ include_once "config.php";
 ?>
 
 <!DOCTYPE html>
-
 <head>
     <title>Mon Compte</title>
     <link rel="stylesheet" href="style/style.css">
 
 </head>
-
 <body class="accueil">
 <?php
 include_once "header.php";

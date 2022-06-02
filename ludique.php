@@ -13,6 +13,27 @@ if(isset($_GET['logout']))
 </head>
 <body>
 <?php  include('header.php'); ?>
+<div class="landing-page-background">
+    <section>
+        <div class = "wave wave1"></div>
+        <div class = "wave wave2"></div>
+        <div class = "wave wave3"></div>
+        <div class = "content-outside-ludique">
+            <div class = "content-text-ludique">
+                <h1 >Participer au quizz</h1>
+                <h3 style="color : white;animation: none;">Cliquer ici </h3>
+                <?php
+                if(!isset($_SESSION["loggedin"])){
+                    echo '<a href="login.php"> <div id="btn"><span class="noselect">Se connecter</span><div id="circle"></div></div></a>';
+                } else{
+                    echo '<a href="quiz.php"> <div id="btn"><span class="noselect">Quizz</span><div id="circle"></div></div></a>';
+                }
+                ?>
+            </div>
+        </div>
+    </section>
+</div>
+
 <div class="ludique-container">
     <div class="ludique-title-container">
         <h1>Quelles sont les causes du stress ?</h1>
