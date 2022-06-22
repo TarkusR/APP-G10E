@@ -1,6 +1,8 @@
 var dataSet ='data2.php';
 
 
+
+
 $(document).ready(function(){
     $.ajax({
         url: dataSet,

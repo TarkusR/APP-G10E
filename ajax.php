@@ -11,7 +11,7 @@ if (MySQLi_connect_errno()) {
     echo "Failed to connect to MySQL: " . MySQLi_connect_error();
 }
 
-
+require_once "insertDataScript.php";
 
 if (isset($_POST['search'])) {
 

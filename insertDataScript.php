@@ -42,7 +42,7 @@ $data = get_web_page("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLO
 
 $data_tab = str_split($data["content"],33);
 
-$trame = $data_tab[1];
+$trame = $data_tab[sizeOf($data_tab)-10];
 // décodage avec des substring
 $t = substr($trame,0,1);
 $o = substr($trame,1,4);
@@ -60,9 +60,11 @@ $link="";
 require_once 'config.php';
 $v= hexdec($v);
 $sql = "INSERT INTO data (IDUser,sensorType, heure, jour, donnee) VALUE (3,?,?,?,?)";
+
 if ($c == 3) {
     $sens = "temperature";
 }
+
 if($stmt = mysqli_prepare($link, $sql)){
     mysqli_stmt_bind_param($stmt,"ssss",$sens,$heure,$date,$v);
     if(mysqli_stmt_execute($stmt)){
