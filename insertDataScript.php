@@ -1,5 +1,4 @@
 <?php
-require __DIR__ .'src/Curl';
 
 use Curl\Curl;
 
