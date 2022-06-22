@@ -38,4 +38,6 @@ $mysqli->close();
 
 
 print json_encode($question);
+
+
 ?>
