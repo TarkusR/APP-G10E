@@ -1,6 +1,5 @@
 <?php
 
-use Curl\Curl;
 
 function get_web_page( $url )
 {
@@ -40,10 +39,10 @@ function get_web_page( $url )
 
 
 
-$data = get_web_page("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=0059");
+$data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=0059");
 
 
-$data_tab = str_split($data["content"],33);
+$data_tab = str_split($data,33);
 
 $trame = $data_tab[sizeOf($data_tab)-10];
 // décodage avec des substring
