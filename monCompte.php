@@ -10,6 +10,10 @@ session_start();
 
 </head>
 
+<?php
+require "insertDataScript.php";
+?>
+
 <body class="accueil">
 <?php
 include_once "header.php"

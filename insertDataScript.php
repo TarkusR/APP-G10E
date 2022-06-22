@@ -55,7 +55,6 @@ $date = $year."-".$month."-".$day;
 $heure= $hour.":".$min.":".$sec;
 $sens = "";
 
-echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 $link="";
 require_once 'config.php';
 $v= hexdec($v);
@@ -68,7 +67,7 @@ if ($c == 3) {
 if($stmt = mysqli_prepare($link, $sql)){
     mysqli_stmt_bind_param($stmt,"ssss",$sens,$heure,$date,$v);
     if(mysqli_stmt_execute($stmt)){
-        echo 'success';
+
     }else{
         echo"c'est casser";
     }
